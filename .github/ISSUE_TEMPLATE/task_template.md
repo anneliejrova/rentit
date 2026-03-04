@@ -27,6 +27,6 @@ labels: enhancement, technical-debt
 
 - [ ] **Responsiveness:** Tested in mobile and desktop view
 
-- [ ] **Code Quality:** No unused variables or console logs
+- [ ] **Code Quality:** No unused variables or console logs. Correctly formatted and indented. 
 
-- [ ] **Comment Code**
+- [ ] **JS Function Comments:** Every JS function is documented with a description of its purpose, parameters, and return value.
