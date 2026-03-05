@@ -66,3 +66,13 @@ window.addEventListener("popstate", () => {
 
 // START APP
 navigate(window.location.pathname);
+
+
+------------
+Views screenreaders:
+
+aria-labelledby behövs bara på <section> för att ge den ett namn. Allt innehåll inuti – <p>, <ul>, <img> osv. – sköter sig själva utan extra aria-attribut så länge du använder semantisk HTML.
+
+<section aria-labelledby="about-heading">  ← "mitt namn finns på id=about-heading"
+  <h2 id="about-heading">About us</h2>     ← skärmläsaren läser "About us"
+</section>
