@@ -1,3 +1,3 @@
 import "./style.css";
 
-const app = document.querySelector("#app");
+const app = document.querySelector("main");
