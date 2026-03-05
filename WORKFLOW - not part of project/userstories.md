@@ -15,7 +15,6 @@ Acceptance Criteria:
 - [ ] 
 - [ ] 
 - [ ] 
-<br><br>
 
 -->
  
@@ -23,14 +22,13 @@ Acceptance Criteria:
  <br>
 
 1. ## Title: SPA Skeleton 
-    ### Feature: 
+    ### Feature: Skeleton
     Description:
     A skeleton to take the page based on our prototype
 
     Acceptance Criteria:
     - [ ] Html connecting to JS, JS "takes over" DOM - message to user should it take time
     - [ ] Switching between Views - View components created as files
-    - [ ] View components created as files
     - [ ] Some Components created as files and linked
     - [ ] Semantic code - placeholders
 <br><br>
@@ -84,7 +82,7 @@ Acceptance Criteria:
     - [ ] Header - Added
     - [ ] About - Text about the company
     - [ ] Footer - Added
-    - [ ] Index-view
+    - [ ] Index - 
 <br><br>
 
 1. ## Title: Searchfunction
