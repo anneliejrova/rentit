@@ -10,9 +10,9 @@ function loadView(slug) {
   //renders header with content
   renderHeader(route);
 
-  //calls component to load the correct view
+  //calls component and the correct view to render
   route.component().then(module => {
-    document.querySelector('main').innerHTML = module.render();
+    document.querySelector('main').innerHTML = module.render(route);
     document.title = route.title + ' | Rentit';
   });
 }
