@@ -1,0 +1,2990 @@
+{
+  "categories": [
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+      "name": "Cleaning"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567803",
+      "name": "Leisure"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567807",
+      "name": "Textile"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567804",
+      "name": "Kitchen"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567805",
+      "name": "Yard"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567806",
+      "name": "Tools"
+    }
+  ],
+  "products": [
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+      "name": "Grovdammsugare",
+      "shortDescription": "för byggstök och garage",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 100,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806",
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "name": "Våtdammsugare / Textilvårdsmaskin",
+      "shortDescription": "för soffor och mattor",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 250,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d403",
+      "name": "Högtryckstvätt",
+      "shortDescription": "standardmodell för hemmaprojekt",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d404",
+      "name": "Ångtvätt",
+      "shortDescription": "för fogar och sanering utan kemikalier",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d405",
+      "name": "Industriell Avfuktare",
+      "shortDescription": "för källare/vattenskador",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 120,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d406",
+      "name": "Robot-fönsterputsare",
+      "shortDescription": "för svåråtkomliga glaspartier",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 200,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d407",
+      "name": "Ozonmaskin",
+      "shortDescription": "för luktsanering",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 200,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d408",
+      "name": "Golvpoleringsmaskin",
+      "shortDescription": "för trä/sten",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 250,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d409",
+      "name": "Elektrisk Mangel",
+      "shortDescription": "för lakan och dukar",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 100,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d410",
+      "name": "Professionell Steamer",
+      "shortDescription": "för klädvård",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 125,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d411",
+      "name": "Rörrensningsslang",
+      "shortDescription": "tillbehör till högtryckstvätten",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 50,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d412",
+      "name": "Elektrisk Skoputsmaskin",
+      "shortDescription": "för säsongsvård av skor",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 80,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d413",
+      "name": "Takbox (Universal)",
+      "shortDescription": "Maximera packutrymmet inför skidresan eller sommarsemestern. Våra rymliga takboxar passar de flesta bilar och gör att hela familjen kan resa bekvämt utan att behöva sitta bland väskorna.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d414",
+      "name": "Partytält (3x6m)",
+      "shortDescription": "Säkra sommarfesten mot både regn och stark sol. Ett rejält och stabilt tält som rymmer hela långbordet och skapar en ombonad utomhusmiljö för dop, födelsedagar eller grannfesten.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 400,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803",
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d415",
+      "name": "Uppblåsbar SUP (Stand Up Paddleboard)",
+      "shortDescription": "Utforska stadens vattenvägar från ett nytt perspektiv. Denna stabila bräda levereras i en praktisk ryggsäck med pump, så att du enkelt kan ta den med dig till närmaste brygga.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 250,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d416",
+      "name": "Campingpaket (Tält, liggunderlag, stormkök)",
+      "shortDescription": "Allt du behöver för ett äventyr i naturen utan att behöva köpa egen utrustning. Innehåller ett modernt tält, liggunderlag och ett pålitligt stormkök – redo för din första vandring.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 300,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d417",
+      "name": "Portabel Projektor & Utomhusduk",
+      "shortDescription": "Förvandla trädgården eller vardagsrummet till en egen biograf. Enkel att koppla upp mot mobilen eller datorn för en oförglömlig filmkväll under stjärnorna.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 350,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803",
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d418",
+      "name": "Kraftfull Partyhögtalare (Batteridriven)",
+      "shortDescription": "Sätt fart på festen med kraftfullt ljud och inbyggd ljusshow. Denna robusta högtalare är helt sladdlös och tål att flyttas runt, perfekt för event där eluttag saknas.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 250,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d419",
+      "name": "Cykelhållare (Dragkroksmonterad)",
+      "shortDescription": "Ta med cyklarna på semestern på ett säkert och enkelt sätt. Hållaren monteras snabbt på dragkroken och gör det möjligt att utforska nya cykelleder långt hemifrån.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 100,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d420",
+      "name": "Bärstol för barn (Vandringsryggsäck)",
+      "shortDescription": "Låt de minsta följa med på vandringen. En ergonomisk och säker ryggsäck som gör att barnet sitter bekvämt samtidigt som du får en bra bärkomfort under längre turer i skogen.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 120,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d421",
+      "name": "Popcornmaskin (Bio-modell)",
+      "shortDescription": "Skapa magi på barnkalaset eller företagseventet. Denna maskin poppar snabbt stora mängder popcorn och sprider den där oemotståndliga doften av nygjorda snacks.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 200,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d422",
+      "name": "Teleskop (Stjärnkikare)",
+      "shortDescription": "Kom närmare rymden och utforska stjärnhimlen. Ett kraftfullt teleskop som låter dig se månkratrar och planeter – en spännande aktivitet för både vuxna och barn under mörka kvällar.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d423",
+      "name": "Metalldetektor",
+      "shortDescription": "Ge dig ut på en modern skattjakt. Oavsett om du letar efter borttappade nycklar eller är nyfiken på vad som döljer sig under jorden, är detta en spännande hobby för en dag.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d424",
+      "name": "Pingisbord (Hopfällbart)",
+      "shortDescription": "En garanterad succé för både fest och inomhusaktivitet. Bordet har officiella mått men fälls enkelt ihop för smidig transport och förvaring. Det perfekta valet för en turnering i garaget, en aktivitet på barnkalaset eller som ett stabilt bord för en omgång Beer Pong på festen.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 80,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567803"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d425",
+      "name": "Overlockmaskin",
+      "shortDescription": "Ett måste för dig som syr kläder. Den syr ihop, kastar över kanten och skär rent tyget i ett enda moment för proffsiga, elastiska sömmar.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 180,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d426",
+      "name": "Kraftig Symaskin (Jeans/Läder)",
+      "shortDescription": "En robust maskin med extra stark motor. Perfekt för att laga tält, sy i läder eller lägga upp kraftiga jeans som vanliga hushållsmaskiner går bet på.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d427",
+      "name": "Broderimaskin",
+      "shortDescription": "Skapa personliga mönster, logotyper eller monogram. En datoriserad maskin som förvandlar ett enkelt plagg till ett unikt designobjekt.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 220,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d428",
+      "name": "Coverpro / Coverstitch-maskin",
+      "shortDescription": "Specialmaskinen för att få den där perfekta 'köpta' finishen på fållar i trikå och stretchtyger, precis som på proffskläder.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 190,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d429",
+      "name": "Skomakar-städ & Verktygskit",
+      "shortDescription": "Ett kit för den som vill sula om skor eller laga läderdetaljer för hand. Innehåller läst, sylar och vaxad specialtråd.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 80,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d430",
+      "name": "Manuell Skinnspaltmaskin",
+      "shortDescription": "Ett precisionsverktyg för läderhantverk som används för att hyvla ner tjockleken på läder så att det blir lättare att vika och sy snyggt.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 120,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d431",
+      "name": "Läderstansset & Revolvertång",
+      "shortDescription": "Allt du behöver för att göra snygga hål, montera tryckknappar eller nitar i bälten, väskor och sadelgjordar.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 60,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d432",
+      "name": "Klädvårds-kit (Noppborttagare Pro)",
+      "shortDescription": "En kraftfull, nätansluten noppborttagare som effektivt räddar dina ulltröjor och möbeltyger från fula noppor.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 50,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d433",
+      "name": "Vävstol (Bordsmodell)",
+      "shortDescription": "En kompakt vävstol för att prova på vävning av halsdukar eller mindre dukar utan att behöva en hel ateljé.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 100,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d434",
+      "name": "Tygskärar-set (Rullkniv & Skärmatta)",
+      "shortDescription": "För precisionsklippning av stora tygstycken eller quiltning. Innehåller en stor självläkande matta och ergonomisk rullkniv.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 70,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d435",
+      "name": "Karda & Slända (Ullpaket)",
+      "shortDescription": "För dig som vill prova på att bereda ull från grunden. Innehåller handkardor och en balanserad slända för att spinna eget garn.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 60,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d436",
+      "name": "Tuftingpistol (för mattillverkning)",
+      "shortDescription": "Den trendiga maskinen för att skapa egna fluffiga mattor och väggkonst genom att 'skjuta' in garn i en väv.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 250,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d437",
+      "name": "Frystork (Freeze Dryer)",
+      "shortDescription": "Den ultimata maskinen för långtidsförvaring. Bevarar 97% av näringsvärdet och smaken i maten. Perfekt för att förbereda egen vandringsmat eller rädda stora mängder skörd utan att ta upp plats i frysen.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 450,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d438",
+      "name": "Saftmaja (Rostfri)",
+      "shortDescription": "Ångkoka din egen saft direkt från trädgårdens bär eller frukt. Denna klassiker gör att du slipper kärna ur och skala – ångan gör jobbet och du får ren, klar saft som håller hela vintern.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 50,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d439",
+      "name": "Mattork / Svamptork (Pro)",
+      "shortDescription": "Maximera hållbarheten på säsongens råvaror. Med exakt temperaturkontroll torkar du svamp, örter och frukt varsamt, vilket koncentrerar smakerna och gör dem perfekta som hälsosamma snacks.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 120,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d440",
+      "name": "Sous Vide-paket (Cirkulator & Kärl)",
+      "shortDescription": "Uppnå restaurangresultat i ditt eget kök. Genom att tillaga vakuumpackad mat i ett exakt tempererat vattenbad blir kött, fisk och grönsaker perfekt möra och saftiga varje gång.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 100,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d441",
+      "name": "Vakuumförpackare (Pro)",
+      "shortDescription": "Ett oumbärligt verktyg för att minska matsvinn. Genom att avlägsna luften förlänger du hållbarheten i frysen drastiskt och förhindrar frostskador, samtidigt som det är nyckeln till lyckad Sous Vide.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 100,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d442",
+      "name": "Råsaftcentrifug (Heavy Duty)",
+      "shortDescription": "Förvandla stora mängder äpplen eller morötter till färsk juice på sekunder. Denna robusta maskin separerar automatiskt bort skal och fruktkött, vilket gör det enkelt att ta tillvara på fallfrukt.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d443",
+      "name": "Hushållsassistent (Stark modell)",
+      "shortDescription": "En rejäl arbetshäst för storbaket. Den kraftfulla motorn orkar knåda tunga surdegar och stora bullsatser som vanliga maskiner inte klarar av – perfekt för dig som vill fylla frysen med hembakt.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d444",
+      "name": "Korvstoppare & Köttkvarn",
+      "shortDescription": "Ta kontroll över innehållet i din mat. Perfekt för jägaren eller för dig som vill skapa egna unika hantverkskorvar till grillfesten utan tillsatser och onödigt svinn.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 120,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d445",
+      "name": "Elektrisk Pastamaskin",
+      "shortDescription": "Gör lyxig, hemgjord pasta till hela släkten utan ansträngning. Maskinen kavlar och skär degen med precision, vilket ger en kvalitet och smak som inte går att hitta i butikshyllan.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 120,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d446",
+      "name": "Glassmaskin (med kompressor)",
+      "shortDescription": "Skapa professionell gelato eller sorbet på under en timme. Tack vare den inbyggda kompressorn behöver du inte förfrysa några delar – det är bara att ösa i dina egna bär och njuta.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d447",
+      "name": "Stor Elektrisk Bordsgrill / Stekbord",
+      "shortDescription": "Det perfekta valet för stora bjudningar eller sommarkvällar på uteplatsen. Det stora stekbordet ger jämn värme och låter dig steka allt från burgare till grönsaker till många personer samtidigt.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 200,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d448",
+      "name": "Konserverings-apparat (Canner)",
+      "shortDescription": "Den säkraste metoden för att konservera mat på burk. Denna tryckkonserverare gör att du kan förvara färdiga rätter, kött och grönsaker i rumstemperatur i åratal, precis som förr i tiden.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 120,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567804"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d449",
+      "name": "Vedklyv (Hydraulisk)",
+      "shortDescription": "Kraftfull maskin som gör vedstaplandet till ett nöje. Klyver stora kubbar snabbt och säkert utan att du behöver slita ut ryggen med yxan.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 250,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d450",
+      "name": "Jordfräs (Bensindriven)",
+      "shortDescription": "Det enda sättet att förbereda trädgårdslandet inför våren. Fräser upp hård jord och blandar ner gödsel på djupet på en bråkdel av tiden det tar med spade.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 300,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d451",
+      "name": "Kompostkvarn / Flismaskin",
+      "shortDescription": "Förvandla dina grenar och kvistar till näringsrik flis. Perfekt för att täcka rabatter eller göra gångstigar, samtidigt som du slipper köra lass till tippen.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 200,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d452",
+      "name": "Vertikalskärare & Mossrivare",
+      "shortDescription": "Ge gräsmattan en nystart. Den skär ner i jorden och tar bort mossa och dött gräs så att rötterna får syre och vatten igen.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 180,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d453",
+      "name": "Stor Utomhusgrill (Gasol/Kol)",
+      "shortDescription": "En rejäl pjäs för de största festerna. Denna grill har ytan som krävs för att servera ett helt sällskap samtidigt – levereras rengjord och redo.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 350,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d454",
+      "name": "Studsmatta (Premium med skyddsnät)",
+      "shortDescription": "En favorit för barnen under semestern. Vi levererar och monterar en säker och stabil studsmatta som du slipper förvara i garaget under vintern.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d455",
+      "name": "Häcksax (Teleskopmodell)",
+      "shortDescription": "Nå de högsta topparna på häcken utan stege. Kraftfull och batteridriven för att ge dig full frihet och snygga, raka linjer.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 120,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d456",
+      "name": "Lövblås / Lövsug",
+      "shortDescription": "Rensa uppfarten och gräsmattan på nolltid. Kan även suga upp löven och finfördela dem direkt i en säck för enkel kompostering.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 100,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d457",
+      "name": "Stolpslägga / Jordborr",
+      "shortDescription": "Planerar du att bygga staket eller altan? Detta verktyg gör det enkelt att få ner stolpar djupt och rakt utan att gräva stora hål för hand.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d458",
+      "name": "Grensåg på stång",
+      "shortDescription": "En liten motorsåg på ett långt skaft för att säkert beskära träd från marken. Perfekt för att ta bort riskfyllda grenar efter storm eller snöfall.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 130,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d459",
+      "name": "Gallervält",
+      "shortDescription": "Ett måste vid nysådd av gräsmatta. Den plattar till jorden och ser till att fröna får bra kontakt med marken så att de inte blåser bort eller äts upp.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 80,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d460",
+      "name": "Batteridriven Grästrimmer (Pro)",
+      "shortDescription": "För snygga kanter vid rabatter och stenläggningar där klipparen inte kommer åt. Stark nog för att ta sig igenom även högt och grovt gräs.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 90,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "name": "Slagborr / Borrhammare (SDS)",
+      "shortDescription": "När den vanliga borrmaskinen ger upp. Denna maskin hamrar sig igenom betong, sten och tegel med enkelhet – perfekt för att sätta upp hyllor i lägenheten eller grinda bort kakel.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 120,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d462",
+      "name": "Sticksåg (Pro med pendelfunktion)",
+      "shortDescription": "För figursågning och precisionssnitt i trä, plast eller metall. Ett mångsidigt verktyg för allt från att kapa bänkskivor till att såga ut hål för diskhon.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 90,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d463",
+      "name": "Kap- & Gersåg med stativ",
+      "shortDescription": "Det absolut viktigaste verktyget vid listning, golvläggning eller altanbygge. Stativet gör att du arbetar ergonomiskt och får exakta vinklar varje gång.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 180,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d464",
+      "name": "Cirkelsåg (Batteridriven)",
+      "shortDescription": "För långa, raka och kraftfulla snitt i reglar och skivmaterial. Ger dig sladdlös frihet när du bygger på platser där eluttagen är få.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 130,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d465",
+      "name": "Multislip / Excenterslip",
+      "shortDescription": "Rädda dina gamla loppisfynd! Tar effektivt bort gammal färg och lack på möbler, dörrar eller trappor och lämnar en perfekt slät yta för målning.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 100,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d466",
+      "name": "Kakelskärare (Vattensågad)",
+      "shortDescription": "För dig som renoverar badrum eller kök. Vattnet kyler klingan och minskar dammet, vilket gör att du kan kapa kakel och klinker med extrem precision utan sprickor.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 150,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d467",
+      "name": "Krysslaser med stativ",
+      "shortDescription": "Sluta gissa med vattenpasset. Denna laser projicerar spikraka linjer på väggen så att allt från kakelplattor till tavlor hamnar i exakt rätt höjd och vinkel.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 80,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d468",
+      "name": "Tapetbord (Hopfällbart)",
+      "shortDescription": "Enkel men ovärderlig produkt. Ger dig en stabil och lång yta för att limma tapetvåder utan spill på golvet. Tar ingen plats alls när det är hopfällt.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 50,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d469",
+      "name": "Gipshiss",
+      "shortDescription": "Räddaren i nöden vid takrenovering. Gör att en person ensam kan lyfta och hålla tunga gipsskivor på plats mot taket under tiden de skruvas fast.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 120,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d470",
+      "name": "Varmluftspistol (Pro)",
+      "shortDescription": "Kraftfull maskin för att bränna bort gammal färg, böja plaströr eller tina frusna vattenrör. Ett enkelt verktyg som gör ett tidskrävande jobb mycket snabbare.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 60,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d471",
+      "name": "Trappstege / Multistege (4 meter)",
+      "shortDescription": "En robust och säker stege som kan ställas i olika vinklar, perfekt för målning i trappor eller när du behöver nå högt upp på husfasaden.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 70,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    },
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d472",
+      "name": "Regelfinnare & Multidetektor",
+      "shortDescription": "Undvik dyra misstag genom att se vad som gömmer sig bakom väggen. Hittar reglar, elledningar och vattenrör innan du sätter borren i väggen.",
+      "description": null,
+      "imgUrl": null,
+      "pricePerDay": 40,
+      "categoryIds": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "359df4fc-c8a2-481a-b0f5-9a22beedb323",
+      "name": "Våtdammsugare / Textilvårdsmaskin 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "be9dd91a-6d67-4f83-a329-3ee16dd9525b",
+      "name": "Våtdammsugare / Textilvårdsmaskin 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "3723fbc2-fea5-47b9-8ddb-c476d6371ea6",
+      "name": "Våtdammsugare / Textilvårdsmaskin 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "498d3680-8f6d-40a0-ab96-2b1660313616",
+      "name": "Våtdammsugare / Textilvårdsmaskin 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "c96a331f-a600-4fd5-9221-9ad4e99a14b8",
+      "name": "Våtdammsugare / Textilvårdsmaskin 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "2e8b60b8-19e1-460b-9f52-baf92c7246d5",
+      "name": "Våtdammsugare / Textilvårdsmaskin 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "bc9ea1f7-f8ec-4fd7-b159-0ccba399e4ca",
+      "name": "Våtdammsugare / Textilvårdsmaskin 7",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "8a13f622-b9c7-4436-8cd3-d56d246ad2d9",
+      "name": "Våtdammsugare / Textilvårdsmaskin 8",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "ba5e1710-4035-4954-bd69-f2685ff83d38",
+      "name": "Våtdammsugare / Textilvårdsmaskin 9",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "81e20fbf-193a-4d57-add4-fac8f1c65b87",
+      "name": "Våtdammsugare / Textilvårdsmaskin 10",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "6a13fbd0-9f2d-4ad4-ad00-406eff8e3f85",
+      "name": "Våtdammsugare / Textilvårdsmaskin 11",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d1437365-85e9-4fc3-bf08-a7a245cc643f",
+      "name": "Våtdammsugare / Textilvårdsmaskin 12",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "bdefc6b3-2aae-4957-8f32-cd3a85cb0281",
+      "name": "Våtdammsugare / Textilvårdsmaskin 13",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "3a0c21cb-ba41-4e30-af46-28a270490895",
+      "name": "Våtdammsugare / Textilvårdsmaskin 14",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1cd48803-ca3d-4293-95c0-92dda626bfca",
+      "name": "Våtdammsugare / Textilvårdsmaskin 15",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "c91cd0dd-31a2-4706-8b4e-dcf0774fc6d2",
+      "name": "Grovdammsugare 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "5f6e98b9-8b86-4d89-846f-99a65adf8f73",
+      "name": "Grovdammsugare 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9e4b313b-9e12-4d15-915b-674f64953608",
+      "name": "Grovdammsugare 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "88e28930-daa8-4dd2-bfb8-f89eb82a2ff5",
+      "name": "Grovdammsugare 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9a37b183-b60e-4b91-83e1-9f71ed2e0738",
+      "name": "Grovdammsugare 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "8ac04a24-a9df-4823-8e28-a59ab0326f0a",
+      "name": "Grovdammsugare 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "4817529a-7eaf-4160-8b4f-57050f946df6",
+      "name": "Grovdammsugare 7",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "41f6fd81-3d50-4700-9c1f-152fcae210cd",
+      "name": "Grovdammsugare 8",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e4de48f0-a03f-410b-a01b-272e52295ade",
+      "name": "Grovdammsugare 9",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1372e2ae-d307-490b-92e1-534621ce362a",
+      "name": "Grovdammsugare 10",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e43c7e0c-95a7-4242-8623-b7da81d54431",
+      "name": "Högtryckstvätt 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d403",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "699e92cf-b40f-44fc-8391-ada4eb7cea9d",
+      "name": "Högtryckstvätt 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d403",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "bf5c051b-900d-4c4c-b9c3-3550f4964f04",
+      "name": "Högtryckstvätt 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d403",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "97dee4b8-9a80-419c-85ed-ca79171c9f35",
+      "name": "Högtryckstvätt 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d403",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9b432d3d-5ac8-4932-90b1-ca1b032db677",
+      "name": "Högtryckstvätt 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d403",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "8874b15a-b2a2-48d9-953e-2894449b2d47",
+      "name": "Högtryckstvätt 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d403",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "c2aa041f-a574-4841-bfe5-1fc119eede7e",
+      "name": "Högtryckstvätt 7",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d403",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "881354b3-92d0-48d3-a149-b8d9e8b497f0",
+      "name": "Högtryckstvätt 8",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d403",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "b662fe8f-68ad-4a9a-ae9c-f42928b31283",
+      "name": "Ångtvätt 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d404",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0fee3ab1-c09c-4013-a67e-6610f4aa875e",
+      "name": "Ångtvätt 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d404",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "5ca81d10-1444-49a2-b756-c2a441e7c640",
+      "name": "Ångtvätt 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d404",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "45b6902e-f712-45ee-9145-ae36518f7bd5",
+      "name": "Ångtvätt 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d404",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d0feff1e-0b99-4a46-a049-f65c3ac91d2b",
+      "name": "Ångtvätt 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d404",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "79a394c3-173d-4b97-8232-4a84cc9e75d6",
+      "name": "Ångtvätt 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d404",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "a6c54153-186a-4902-8f39-4f104369d417",
+      "name": "Ångtvätt 7",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d404",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0b6c3312-8b88-4526-928c-69b0f93e8cc5",
+      "name": "Ångtvätt 8",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d404",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9bd62acb-cc40-40c0-8307-3af1b103bfc7",
+      "name": "Professionell Steamer 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d410",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "fc9b912d-8e12-4d5d-bd7f-035c700bb6c4",
+      "name": "Professionell Steamer 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d410",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "cfe5b7e7-b14f-40bb-926b-0189471db407",
+      "name": "Professionell Steamer 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d410",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "bd878ecb-b4d3-48ab-adaf-23d25eddeba9",
+      "name": "Professionell Steamer 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d410",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "be815dfd-4f34-44b6-a1dd-dce3bb1abd69",
+      "name": "Rörrensningsslang 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d411",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "41c177f7-ab28-4347-9a0e-f787e02a4997",
+      "name": "Rörrensningsslang 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d411",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "45c6d3f2-e07c-4d87-927f-df8ddf727119",
+      "name": "Rörrensningsslang 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d411",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "7d098db9-dce8-424d-9518-9b829b095139",
+      "name": "Rörrensningsslang 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d411",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "a46e9c2a-ffd2-43ab-88d9-a0e81ad33ea5",
+      "name": "Industriell Avfuktare 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d405",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "52f8bd3e-7eb1-4c27-8523-0e6bfd5dbdf0",
+      "name": "Industriell Avfuktare 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d405",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e4aed1f4-78d2-4fe7-a3c6-8507c56abd2d",
+      "name": "Industriell Avfuktare 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d405",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "4707c282-88fe-431b-9416-113cdeb6c291",
+      "name": "Robot-fönsterputsare 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d406",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d78a7159-7444-447e-843e-7deb26bf24ca",
+      "name": "Robot-fönsterputsare 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d406",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1231682a-b33a-4444-bfae-f35f272ad934",
+      "name": "Robot-fönsterputsare 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d406",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "4cb18a2c-bd2b-46c2-8625-802875743bbc",
+      "name": "Ozonmaskin 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d407",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "dfdfecad-fd0e-4590-844b-07825e52f2c3",
+      "name": "Ozonmaskin 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d407",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "7c11a8b6-9865-4ed2-93da-3f125107a5fc",
+      "name": "Golvpoleringsmaskin 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d408",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d45df5a6-b569-4c94-928d-be6189fc75c9",
+      "name": "Golvpoleringsmaskin 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d408",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "60235daf-3147-4da4-b90f-07487e12a4ae",
+      "name": "Elektrisk Mangel 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d409",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "b3807870-4ede-4f55-a7ae-699e13905d55",
+      "name": "Elektrisk Mangel 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d409",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "815e4267-5414-4be8-978b-532836ec1866",
+      "name": "Elektrisk Skoputsmaskin 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d412",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "824f9b1c-0c97-4752-a5fd-b3beb244d7ba",
+      "name": "Elektrisk Skoputsmaskin 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d412",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "f8d1a155-a3a7-49e7-97cb-b72cfa76ba10",
+      "name": "Slagborr / Borrhammare (SDS) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "33a154da-0364-4056-b172-62b4b9e26ae7",
+      "name": "Slagborr / Borrhammare (SDS) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "18983a97-a0e4-4f98-b794-490651d650dd",
+      "name": "Slagborr / Borrhammare (SDS) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "b155e754-d737-4dea-93c6-8b186296e9dc",
+      "name": "Slagborr / Borrhammare (SDS) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "b6c38c29-92e2-456f-8a71-cfa620ff37de",
+      "name": "Slagborr / Borrhammare (SDS) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "06e18832-1234-46fb-814b-d0a53bd7846f",
+      "name": "Slagborr / Borrhammare (SDS) 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "15c895db-0c0b-4736-840c-0fa63582d6d4",
+      "name": "Slagborr / Borrhammare (SDS) 7",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "db40e178-9827-466e-b544-b781abb6c548",
+      "name": "Slagborr / Borrhammare (SDS) 8",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "6aa6f228-706a-4721-8bc9-787611077755",
+      "name": "Slagborr / Borrhammare (SDS) 9",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d2857f96-193c-4d6c-b711-c69222afde8f",
+      "name": "Slagborr / Borrhammare (SDS) 10",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "655a2881-7300-480f-bdc1-f01163d0d72d",
+      "name": "Slagborr / Borrhammare (SDS) 11",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "5964b6d2-40e8-45c5-8c63-44b3fa155ebd",
+      "name": "Slagborr / Borrhammare (SDS) 12",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d461",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "5ee541b8-234a-4420-88c3-fbb101e38ee9",
+      "name": "Sticksåg (Pro med pendelfunktion) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d462",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "852e91cd-c15a-4307-9813-ade35fdd3b5c",
+      "name": "Sticksåg (Pro med pendelfunktion) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d462",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "005e6caf-6fd4-4c0c-8526-8f62a7272ccd",
+      "name": "Sticksåg (Pro med pendelfunktion) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d462",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "8cdea517-5d0a-40ee-9a13-27f970bc80ba",
+      "name": "Sticksåg (Pro med pendelfunktion) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d462",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "a569b792-3d5a-4888-acd9-0b771610cca6",
+      "name": "Sticksåg (Pro med pendelfunktion) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d462",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "f0ecf5cd-9651-48a8-b422-9ecc625db900",
+      "name": "Sticksåg (Pro med pendelfunktion) 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d462",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "6e8f79ca-c80e-442d-be41-bad178ce4ab9",
+      "name": "Kap- & Gersåg med stativ 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d463",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "ae4a8b15-2703-4e86-85ab-4221cb1fa0ff",
+      "name": "Kap- & Gersåg med stativ 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d463",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d99ee5b6-1681-44b1-9505-d8b81c5adcd2",
+      "name": "Kap- & Gersåg med stativ 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d463",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "460db361-3b7d-4f23-b83c-022439d6655f",
+      "name": "Kap- & Gersåg med stativ 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d463",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "f10e2953-6236-4235-b260-b6e7950626b1",
+      "name": "Kap- & Gersåg med stativ 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d463",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "a804b761-6a8f-4e6a-933b-f655c4f5d048",
+      "name": "Kap- & Gersåg med stativ 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d463",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e9cd4ee5-6aa0-4c6d-abb7-abdd0b5d5618",
+      "name": "Multislip / Excenterslip 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d465",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "c769a72c-2e33-42bc-aa7a-fc5e9a030baa",
+      "name": "Multislip / Excenterslip 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d465",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e24056b7-24ba-42d6-810b-4502cf212ca4",
+      "name": "Multislip / Excenterslip 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d465",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "f5f1f215-254f-46fd-adf4-f451d8ad9a57",
+      "name": "Multislip / Excenterslip 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d465",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "533a7bf3-670b-414a-bf22-708ba3c6b479",
+      "name": "Multislip / Excenterslip 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d465",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "11aa76dc-6a62-4170-950c-83ec2d1e4ddd",
+      "name": "Multislip / Excenterslip 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d465",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d78d0f09-e128-47e2-a3b4-2707f76922ae",
+      "name": "Krysslaser med stativ 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d467",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1462c3c2-4c7e-426e-b56c-d170f1428c3b",
+      "name": "Krysslaser med stativ 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d467",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "a9f8da8b-9ad9-460e-a29a-636097a1cef4",
+      "name": "Krysslaser med stativ 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d467",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "70c4a5b6-a0a7-4bd2-8f4f-5dfdead11052",
+      "name": "Krysslaser med stativ 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d467",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "a9f180b1-dc57-41b8-9326-482afc9e00a9",
+      "name": "Krysslaser med stativ 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d467",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e39233f0-78d5-4be4-b49a-725caede9e76",
+      "name": "Krysslaser med stativ 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d467",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1fe60a9e-3ff4-402f-a0df-b9bf25a8b24d",
+      "name": "Krysslaser med stativ 7",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d467",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "7b9403a9-99fc-4774-9a76-12212cb287a1",
+      "name": "Krysslaser med stativ 8",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d467",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "14ae115b-e7cc-4d11-8c14-2aa2582227f0",
+      "name": "Regelfinnare & Multidetektor 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d472",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "8a592484-ac36-4435-9481-383c60992785",
+      "name": "Regelfinnare & Multidetektor 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d472",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "97c0d1ea-a86d-4655-bce1-0cee1003f4ba",
+      "name": "Regelfinnare & Multidetektor 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d472",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "7899593b-4f66-4c59-b8aa-dffce70e8930",
+      "name": "Regelfinnare & Multidetektor 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d472",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "f25b2ba9-7d71-4b68-94a5-8675bb5baf3a",
+      "name": "Cirkelsåg (Batteridriven) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d464",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "58fecca6-dab2-4ca1-9626-1d0294f24d3a",
+      "name": "Cirkelsåg (Batteridriven) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d464",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "ed74edba-9f7e-4970-94fd-e35ffd2e6477",
+      "name": "Cirkelsåg (Batteridriven) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d464",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "943b02fd-83cd-4ac9-90fc-b00db553013e",
+      "name": "Cirkelsåg (Batteridriven) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d464",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "407e4515-65d3-4aea-b4cd-f43d26c86a37",
+      "name": "Tapetbord (Hopfällbart) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d468",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "636357f5-8f2f-4a6a-9a9f-0bc7d481ab12",
+      "name": "Tapetbord (Hopfällbart) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d468",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "36bbff7b-4a37-4c7d-bd94-415cbea589c8",
+      "name": "Tapetbord (Hopfällbart) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d468",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "41434117-8948-44fd-8307-4f5a5f26dc64",
+      "name": "Tapetbord (Hopfällbart) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d468",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9d6b90ac-6f68-439d-8e25-e9442fb39d83",
+      "name": "Gipshiss 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d469",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "57d48d6b-db06-464e-a06e-eb374b591ee1",
+      "name": "Gipshiss 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d469",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "33d60f64-4e9a-44d8-b9f7-91baeb0030c8",
+      "name": "Gipshiss 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d469",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "3066374b-c3ef-4f85-833b-3ca484dadab2",
+      "name": "Gipshiss 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d469",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "41d5cd15-d765-4a0c-b26e-132f2f8c4007",
+      "name": "Varmluftspistol (Pro) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d470",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "af6f4961-89a5-474e-b62a-1b0cc1c9629d",
+      "name": "Varmluftspistol (Pro) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d470",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "f87992f6-e04b-473c-b4f2-bd0db74e3c0c",
+      "name": "Varmluftspistol (Pro) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d470",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "4a01e068-3d9f-4c58-87a2-9feb6dba4cfc",
+      "name": "Varmluftspistol (Pro) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d470",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "2c0b326c-568a-46ac-be1a-e61c80b5ab18",
+      "name": "Trappstege / Multistege (4 meter) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d471",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "44e4362b-539c-4498-b909-b6227a670a32",
+      "name": "Trappstege / Multistege (4 meter) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d471",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "138f5bf6-9ae2-450a-a685-b4b8b9bc9cee",
+      "name": "Trappstege / Multistege (4 meter) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d471",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "b424aa34-a224-4517-8be0-d19420e1cbc3",
+      "name": "Trappstege / Multistege (4 meter) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d471",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "80758c66-90c0-4173-b3c3-f8da3b017ac2",
+      "name": "Kakelskärare (Vattensågad) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d466",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e5b6d9ad-15e3-46cb-bed1-76404ef0683e",
+      "name": "Kakelskärare (Vattensågad) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d466",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e5140e5d-1dce-4024-ac58-afe94d9bc18c",
+      "name": "Kakelskärare (Vattensågad) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d466",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "34212300-dacf-4019-bf39-2f5a9962ce28",
+      "name": "Mattork / Svamptork (Pro) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d439",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0fa0e87f-cd76-4ab7-99a8-8e2ee2dbd190",
+      "name": "Mattork / Svamptork (Pro) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d439",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "3d704241-d479-4ddb-938f-1ca787c3732b",
+      "name": "Mattork / Svamptork (Pro) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d439",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0eee29f5-72b1-476d-b824-bdf9f02ab55e",
+      "name": "Mattork / Svamptork (Pro) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d439",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "64807e1b-a926-412f-9d26-4d7417a3f4f8",
+      "name": "Mattork / Svamptork (Pro) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d439",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "a08bdf4d-8238-4cee-b8e2-b2947213613a",
+      "name": "Mattork / Svamptork (Pro) 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d439",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "58a27cf7-c1f5-480b-96b8-12b368ea2935",
+      "name": "Mattork / Svamptork (Pro) 7",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d439",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e2801efd-840b-45fa-97a9-15093dd1dd47",
+      "name": "Mattork / Svamptork (Pro) 8",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d439",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "65f5c303-29c7-4c1f-b4fa-10cde2de410d",
+      "name": "Mattork / Svamptork (Pro) 9",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d439",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "5711c873-ca26-487d-9fb1-6753f5cd428c",
+      "name": "Mattork / Svamptork (Pro) 10",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d439",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "156f469d-4805-4cf3-82ff-619754c4100b",
+      "name": "Saftmaja (Rostfri) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d438",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9e67b97f-bfdb-4671-959a-65fbcc016583",
+      "name": "Saftmaja (Rostfri) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d438",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d023c720-661a-4bcc-a842-5f2b2cbede1d",
+      "name": "Saftmaja (Rostfri) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d438",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "7908863c-bd11-4402-8a13-d2cdf91d76b1",
+      "name": "Saftmaja (Rostfri) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d438",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "c8fee976-80f3-47e1-a5d9-1544709c0029",
+      "name": "Saftmaja (Rostfri) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d438",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0252715a-6647-49fd-87d4-55a4cf5b4ac6",
+      "name": "Saftmaja (Rostfri) 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d438",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "a7adf40e-0c90-4937-9baf-02527e8d9a45",
+      "name": "Saftmaja (Rostfri) 7",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d438",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "4e10344a-c383-47b7-abc7-aa5a26eb9884",
+      "name": "Saftmaja (Rostfri) 8",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d438",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "6de4da4d-98df-444b-888b-292f08a82fc1",
+      "name": "Vakuumförpackare (Pro) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d441",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "7b6ec48a-890c-4518-9dfd-b256b0671d28",
+      "name": "Vakuumförpackare (Pro) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d441",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "69ef1d57-395d-4682-8863-8d4ea96a804e",
+      "name": "Vakuumförpackare (Pro) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d441",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "f6438f37-3cb5-4a3e-aaf9-58e797b2d88a",
+      "name": "Vakuumförpackare (Pro) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d441",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "069af6b9-17a1-40c8-b5a3-ce004f932925",
+      "name": "Vakuumförpackare (Pro) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d441",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "6029d1e6-e2a9-4318-8ec2-c33e5d5dabb4",
+      "name": "Vakuumförpackare (Pro) 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d441",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "b75f9054-2551-4e78-955e-5a2acada2016",
+      "name": "Sous Vide-paket (Cirkulator & Kärl) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d440",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "ebb40b20-b8cb-4dfd-aa00-0bb701282d82",
+      "name": "Sous Vide-paket (Cirkulator & Kärl) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d440",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "365e4aca-88fb-4219-89a0-05f0042dd4fb",
+      "name": "Sous Vide-paket (Cirkulator & Kärl) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d440",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "07b806c5-935c-4c31-97cc-441fcc070054",
+      "name": "Sous Vide-paket (Cirkulator & Kärl) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d440",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "03dd2e16-33d1-476e-a0db-b1b8d321888d",
+      "name": "Sous Vide-paket (Cirkulator & Kärl) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d440",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d1265515-9ca5-49d0-be94-700c88a9c001",
+      "name": "Råsaftcentrifug (Heavy Duty) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d442",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "8940d39b-3006-4e24-bf0a-315b86833e4a",
+      "name": "Råsaftcentrifug (Heavy Duty) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d442",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "79b1fc92-5af4-4b49-9a17-36c5788b2172",
+      "name": "Råsaftcentrifug (Heavy Duty) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d442",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "591f8adf-bebc-408c-ae5d-3ada20ceb3ed",
+      "name": "Råsaftcentrifug (Heavy Duty) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d442",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "b4a40c79-10ea-49b6-a4d8-f2740e932d1c",
+      "name": "Frystork (Freeze Dryer) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d437",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "874142dd-e31b-453d-a74a-5d648a1baaf6",
+      "name": "Frystork (Freeze Dryer) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d437",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "24bee3f4-47e4-4a53-9945-0a6999544929",
+      "name": "Frystork (Freeze Dryer) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d437",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "fa6e75f5-c54b-4efa-8582-b442b5472a39",
+      "name": "Hushållsassistent (Stark modell) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d443",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "055038f2-8ed7-4219-9403-cb02f27b9aa1",
+      "name": "Hushållsassistent (Stark modell) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d443",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1a6e7687-12a9-47d7-9b9c-431b413ec952",
+      "name": "Hushållsassistent (Stark modell) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d443",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "705ebff7-dc8b-4e95-8db0-22ecdfe7d195",
+      "name": "Korvstoppare & Köttkvarn 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d444",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "723d8dd4-d82f-4fff-9108-11e834a94eec",
+      "name": "Korvstoppare & Köttkvarn 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d444",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d8759af1-eca3-4bcd-b8fa-6010daeb9230",
+      "name": "Korvstoppare & Köttkvarn 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d444",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "189e1d1b-059f-47e6-968c-c03c0d40e74c",
+      "name": "Elektrisk Pastamaskin 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d445",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "aa2fc05f-2b2b-4dd3-a98b-e68c2505d937",
+      "name": "Elektrisk Pastamaskin 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d445",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "08e11634-9026-4d2e-b0bd-befc5b6f9d5c",
+      "name": "Elektrisk Pastamaskin 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d445",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "6ca7d190-fa70-4f59-a185-e2410a0e0cde",
+      "name": "Glassmaskin (med kompressor) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d446",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e8832709-6a05-44b2-9a68-202a470d4d37",
+      "name": "Glassmaskin (med kompressor) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d446",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1417b954-f978-46ee-95bd-84a1129b4659",
+      "name": "Stor Elektrisk Bordsgrill / Stekbord 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d447",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d9979521-2975-4ee4-bb11-4e3e5287df46",
+      "name": "Stor Elektrisk Bordsgrill / Stekbord 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d447",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0b3cf845-4368-42ae-be84-67e55faccc0e",
+      "name": "Stor Elektrisk Bordsgrill / Stekbord 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d447",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "009ae0a5-f239-4884-bfc4-9436d987a95c",
+      "name": "Konserverings-apparat (Canner) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d448",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "62c57951-1a4a-443b-8cce-13d919e2ee31",
+      "name": "Konserverings-apparat (Canner) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d448",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "23552eed-1124-4c78-8490-3ec874cb5719",
+      "name": "Vertikalskärare & Mossrivare 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d452",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "57cc67f0-2de8-4db3-a327-db94fb1148ac",
+      "name": "Vertikalskärare & Mossrivare 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d452",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "afdd4caf-b0e0-4184-b517-ded9bc34ae07",
+      "name": "Vertikalskärare & Mossrivare 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d452",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "7cefb0eb-3e39-4f14-b9c4-90729b2dbdf2",
+      "name": "Vertikalskärare & Mossrivare 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d452",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "bbc216a8-b22a-40c1-aee1-7f9fa47a7179",
+      "name": "Vertikalskärare & Mossrivare 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d452",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "b051b9ea-575f-450f-bda0-fa86ce3916c1",
+      "name": "Vertikalskärare & Mossrivare 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d452",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "13beaa50-daaf-4422-a4a4-a9711522a87a",
+      "name": "Vertikalskärare & Mossrivare 7",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d452",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "37ce18cb-38ee-4970-bfae-ad8af52fec4b",
+      "name": "Vertikalskärare & Mossrivare 8",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d452",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1dbc3aed-17e1-4aac-a370-dcb45112491d",
+      "name": "Häcksax (Teleskopmodell) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d455",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "04f7bc9d-34f0-4fef-96b8-410fb042502a",
+      "name": "Häcksax (Teleskopmodell) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d455",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "784c21e0-c3d8-4bc2-b3d8-d84cd7ec202b",
+      "name": "Häcksax (Teleskopmodell) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d455",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "cfcaf7d2-53da-494a-831c-1beedcebc9e3",
+      "name": "Häcksax (Teleskopmodell) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d455",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "5e1f86fa-c8c6-4cd6-9e19-092aa0e4ad2b",
+      "name": "Häcksax (Teleskopmodell) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d455",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0b9b5140-882e-4a24-95f5-3e1e4d3f693e",
+      "name": "Häcksax (Teleskopmodell) 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d455",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "ee002f78-a93e-4cad-92ea-4c11c4499efb",
+      "name": "Jordfräs (Bensindriven) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d450",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0c96e595-d1a7-4139-85af-4fe1169291d8",
+      "name": "Jordfräs (Bensindriven) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d450",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "cf39f2c7-2ea1-4b33-82cf-d393f78adbc8",
+      "name": "Jordfräs (Bensindriven) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d450",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "58430eba-eef3-4af5-9243-9b71cd3a4249",
+      "name": "Jordfräs (Bensindriven) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d450",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "77dbc7ad-b6ce-4f76-819c-2ee2d2cb69c3",
+      "name": "Jordfräs (Bensindriven) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d450",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "552186a4-158a-413f-9e8e-98355a76eb29",
+      "name": "Kompostkvarn / Flismaskin 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d451",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "a3818f9c-00e0-489b-ae9d-b6df07c896b4",
+      "name": "Kompostkvarn / Flismaskin 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d451",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d74011b9-4d59-44f2-a165-f20de1df5812",
+      "name": "Kompostkvarn / Flismaskin 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d451",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9b9ad774-a868-44d5-b512-1550a17fb253",
+      "name": "Kompostkvarn / Flismaskin 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d451",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "bac98fb6-0be0-47c6-b9b6-dc20bceef813",
+      "name": "Kompostkvarn / Flismaskin 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d451",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "726e3f38-3093-4a3f-8f15-35f57de71ab2",
+      "name": "Vedklyv (Hydraulisk) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d449",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d222d165-d49b-4b12-9a0b-bfd15ddda3ca",
+      "name": "Vedklyv (Hydraulisk) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d449",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "61e950a5-4919-49a9-8a1f-6ab9442f06ac",
+      "name": "Vedklyv (Hydraulisk) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d449",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0defece1-1b05-4c51-bcdd-e3112ffa8ff1",
+      "name": "Vedklyv (Hydraulisk) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d449",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "052ae613-4f7a-4d6c-8e51-9865b2304fd0",
+      "name": "Lövblås / Lövsug 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d456",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "69941d9a-1c83-4d4c-ae41-ad0cc5aa831f",
+      "name": "Lövblås / Lövsug 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d456",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "180dbc5e-95b3-4db3-8883-eb10e76ab5ff",
+      "name": "Lövblås / Lövsug 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d456",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "393c9c14-52b4-4da1-a608-09f46af57edb",
+      "name": "Lövblås / Lövsug 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d456",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "3ebe3932-7e08-4bf5-ab0a-5ede79d6b991",
+      "name": "Batteridriven Grästrimmer (Pro) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d460",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "8ccf6487-c90d-4f12-8e25-5ef532a4b725",
+      "name": "Batteridriven Grästrimmer (Pro) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d460",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0cdd51b1-9ce3-4e10-aa56-6626a1d44c63",
+      "name": "Batteridriven Grästrimmer (Pro) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d460",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "141d7872-0db3-475d-add1-962c3036097e",
+      "name": "Batteridriven Grästrimmer (Pro) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d460",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "f8155907-fbd9-4eb4-82f3-52651efe6a68",
+      "name": "Batteridriven Grästrimmer (Pro) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d460",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d1c0a7ac-3058-48da-8a64-b03df9d4096b",
+      "name": "Grensåg på stång 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d458",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "81ffd3c7-ce77-4515-a09e-5f84ae1c1307",
+      "name": "Grensåg på stång 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d458",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "828edd56-917b-422b-a6dc-f34f51cf32c5",
+      "name": "Grensåg på stång 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d458",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "ec09641d-8a0d-46e5-923f-47cf654a575e",
+      "name": "Studsmatta (Premium med skyddsnät) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d454",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "ca14b6f1-8f6e-4558-ba5f-c3b02d4ec794",
+      "name": "Studsmatta (Premium med skyddsnät) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d454",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0aff702f-a007-4f93-aa8e-10b8e54fce32",
+      "name": "Studsmatta (Premium med skyddsnät) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d454",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d6244579-e835-4c97-9717-f930d6452a7f",
+      "name": "Stolpslägga / Jordborr 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d457",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "867f2758-b196-4a34-bf88-a8bc34174a5f",
+      "name": "Stolpslägga / Jordborr 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d457",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "ea162d36-141e-4014-a479-9ea7892580cb",
+      "name": "Stor Utomhusgrill (Gasol/Kol) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d453",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "fec72f40-23ac-414f-a123-1f80db0c767f",
+      "name": "Stor Utomhusgrill (Gasol/Kol) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d453",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "a2e10d9b-678e-42c3-b4f0-a0b9c32e8318",
+      "name": "Gallervält 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d459",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "2341e0e2-5b7a-4b30-a55d-0e2a1fdf1575",
+      "name": "Gallervält 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d459",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "2c674a6b-c3c9-4ec8-8a82-3fa282d2dc0a",
+      "name": "Uppblåsbar SUP (Stand Up Paddleboard) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d415",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9274f22e-5bb9-4a9a-be10-d0dfd338381a",
+      "name": "Uppblåsbar SUP (Stand Up Paddleboard) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d415",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "56c41df9-4d87-4b7e-b55c-407f2311feec",
+      "name": "Uppblåsbar SUP (Stand Up Paddleboard) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d415",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9da67cc7-3b8f-4ac3-a423-b48e67ac0b6b",
+      "name": "Uppblåsbar SUP (Stand Up Paddleboard) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d415",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9aeebc1b-22b9-4304-b102-cd55b21f7dda",
+      "name": "Uppblåsbar SUP (Stand Up Paddleboard) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d415",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1bf40239-4682-4a7e-8fda-126aa1f1c873",
+      "name": "Uppblåsbar SUP (Stand Up Paddleboard) 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d415",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e36cc34f-4447-4f8e-8cda-8d912b88c544",
+      "name": "Uppblåsbar SUP (Stand Up Paddleboard) 7",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d415",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "002a297d-dbeb-4ab9-83fe-73cbe49933c9",
+      "name": "Uppblåsbar SUP (Stand Up Paddleboard) 8",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d415",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "18baf0bc-4fb9-4155-8946-9fe4776499b0",
+      "name": "Takbox (Universal) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d413",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1c68559b-69d1-4d3c-a67c-05ce05cbeadb",
+      "name": "Takbox (Universal) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d413",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "ac00fd9a-feb3-4712-a886-d9f0a9f22e73",
+      "name": "Takbox (Universal) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d413",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "dcb400ea-4999-4250-b9e5-dfda0d223bfc",
+      "name": "Takbox (Universal) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d413",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "7b628d34-24b7-4561-9c2a-219cfb8d94ae",
+      "name": "Takbox (Universal) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d413",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "fab5c969-9405-418e-8c5a-37d16ce27eb9",
+      "name": "Takbox (Universal) 6",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d413",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "80ddb152-99a3-4a0a-9652-b61fb66b67b5",
+      "name": "Takbox (Universal) 7",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d413",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "aab1b52e-e6da-4fc4-83f1-943b15d0de08",
+      "name": "Takbox (Universal) 8",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d413",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "eb4bbb46-84be-4da7-82e7-aed7cf6a1bab",
+      "name": "Campingpaket (Tält, liggunderlag, stormkök) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d416",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1b3c4e3d-1bc4-4b98-9123-ac27bc6a4996",
+      "name": "Campingpaket (Tält, liggunderlag, stormkök) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d416",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9bdcb2c9-1371-4e59-be91-09bdd0ae1e7c",
+      "name": "Campingpaket (Tält, liggunderlag, stormkök) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d416",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "be56db0b-a80d-44d8-8f25-5800206c9bca",
+      "name": "Campingpaket (Tält, liggunderlag, stormkök) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d416",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "3c9ffbda-84d5-46b7-ae18-17b16da8091a",
+      "name": "Campingpaket (Tält, liggunderlag, stormkök) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d416",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "012b70e1-55f0-41ea-baea-ab919df89be5",
+      "name": "Kraftfull Partyhögtalare (Batteridriven) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d418",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "0994e2e1-3f7d-40f7-9826-156e3c380401",
+      "name": "Kraftfull Partyhögtalare (Batteridriven) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d418",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "6ba5271f-61aa-4ddd-b250-5b07fc81d594",
+      "name": "Kraftfull Partyhögtalare (Batteridriven) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d418",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "47738da5-5967-4b8d-a4be-6c08c330efef",
+      "name": "Kraftfull Partyhögtalare (Batteridriven) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d418",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "c1da26db-bcc3-49e9-aeeb-9bdcdfe03060",
+      "name": "Partytält (3x6m) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d414",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "310039ce-3d04-4305-82e5-905f90ed346f",
+      "name": "Partytält (3x6m) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d414",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d8c5b760-bbf7-4830-9439-3e8b853d8c3c",
+      "name": "Partytält (3x6m) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d414",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "62e70699-7799-44e9-90af-186ed96d62fd",
+      "name": "Partytält (3x6m) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d414",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "ea12006b-4fe9-4d0a-a0d4-e11197e61995",
+      "name": "Portabel Projektor & Utomhusduk 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d417",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d1a86efe-8fb6-433f-a393-b3396f48853f",
+      "name": "Portabel Projektor & Utomhusduk 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d417",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d7fdcd26-420d-4cfa-916e-304647ee34c9",
+      "name": "Portabel Projektor & Utomhusduk 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d417",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "3c83b454-b066-471b-bbe3-60e3041d3b23",
+      "name": "Cykelhållare (Dragkroksmonterad) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d419",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "dc1b7929-06d3-4302-9523-f55e2197b18f",
+      "name": "Cykelhållare (Dragkroksmonterad) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d419",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "5549feba-1961-4ed2-838a-34c3f27d0583",
+      "name": "Cykelhållare (Dragkroksmonterad) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d419",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "aedd4bd6-0543-4a25-a28e-33c3c6efed31",
+      "name": "Bärstol för barn (Vandringsryggsäck) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d420",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "edd27829-9870-4cdb-a0b3-7575990483c8",
+      "name": "Bärstol för barn (Vandringsryggsäck) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d420",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9237f36c-8ff5-4afc-888b-4e394b4f09c9",
+      "name": "Bärstol för barn (Vandringsryggsäck) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d420",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "6c3f7c2a-ef2d-40ca-92e0-137090ad4944",
+      "name": "Popcornmaskin (Bio-modell) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d421",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e3938b26-0e60-4928-bb43-70b2164261d4",
+      "name": "Popcornmaskin (Bio-modell) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d421",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "2aa0fb1e-814a-4e2f-939f-9e9358760460",
+      "name": "Pingisbord (Hopfällbart) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d424",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "05ea7247-0494-4eb5-9465-171b64ac64b0",
+      "name": "Pingisbord (Hopfällbart) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d424",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "f4aac1f9-d50b-4339-bfc5-702bf0e77797",
+      "name": "Teleskop (Stjärnkikare) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d422",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9ad9dcdb-91a8-40b8-b15a-989a1c1de470",
+      "name": "Teleskop (Stjärnkikare) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d422",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "882082a4-6012-4cc5-b015-3e2ad4742384",
+      "name": "Metalldetektor 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d423",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "71721563-4cc1-4fdf-b574-e39c95b04a10",
+      "name": "Metalldetektor 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d423",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "80beffd6-8f00-4ab8-8bbd-509a71b39274",
+      "name": "Tuftingpistol (för mattillverkning) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d436",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "c1685f72-ecd2-40e5-af1c-3665ba95e61d",
+      "name": "Tuftingpistol (för mattillverkning) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d436",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "5d25c1c0-b2ba-4c3a-bdc9-280e34ce9c67",
+      "name": "Tuftingpistol (för mattillverkning) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d436",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "aeabeeed-b34a-4e2d-80b9-e650d0eeaa23",
+      "name": "Tuftingpistol (för mattillverkning) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d436",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "db91e0a9-7737-438d-bf3c-daa786006d50",
+      "name": "Kraftig Symaskin (Jeans/Läder) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d426",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "404375b8-a96f-4b5b-a6dc-0a60ea4f899f",
+      "name": "Kraftig Symaskin (Jeans/Läder) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d426",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "ceb18975-c968-4912-903f-5bb8e343e6eb",
+      "name": "Kraftig Symaskin (Jeans/Läder) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d426",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "83a4be54-c18a-4802-b204-392147f38558",
+      "name": "Overlockmaskin 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d425",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9e638e44-875f-4de2-afbf-8a8b95928e36",
+      "name": "Overlockmaskin 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d425",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "2f89e401-c1de-448f-abd3-9da602d5fd87",
+      "name": "Overlockmaskin 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d425",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "895c12a5-b11d-41c3-b1ef-025bb8bb86b6",
+      "name": "Tygskärar-set (Rullkniv & Skärmatta) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d434",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "2e4359bb-84f7-4eb3-bf33-a28217b9c3ca",
+      "name": "Tygskärar-set (Rullkniv & Skärmatta) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d434",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "692d8a4a-e727-4392-9f3a-b94b445fda9e",
+      "name": "Tygskärar-set (Rullkniv & Skärmatta) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d434",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "5de64054-f0b8-4cb1-93c2-ba4af9379cb4",
+      "name": "Tygskärar-set (Rullkniv & Skärmatta) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d434",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "bc63842b-85a5-4196-8ee8-45bea536e611",
+      "name": "Karda & Slända (Ullpaket) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d435",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "94424600-77a3-4398-bd4a-f520c87501a0",
+      "name": "Karda & Slända (Ullpaket) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d435",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "89bfac75-c9cd-42fb-b785-e2c6da7636d1",
+      "name": "Karda & Slända (Ullpaket) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d435",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1ab69b0b-abdc-4004-b859-0857097092d9",
+      "name": "Coverpro / Coverstitch-maskin 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d428",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "194b5b63-1d41-42ce-9018-81ca171c4814",
+      "name": "Coverpro / Coverstitch-maskin 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d428",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "82924c47-1070-4ad2-b408-2b39f44c19ea",
+      "name": "Skomakar-städ & Verktygskit 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d429",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "7ee7c44a-085a-4aa6-b1bd-4bde35fac6ce",
+      "name": "Skomakar-städ & Verktygskit 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d429",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e1427a25-08cc-46f3-aeba-91e214e18c6e",
+      "name": "Manuell Skinnspaltmaskin 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d430",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "7e3e4b4f-2b05-428a-b178-1adc36ec2b09",
+      "name": "Manuell Skinnspaltmaskin 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d430",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "94190869-066c-4929-a9fc-93195b8687c5",
+      "name": "Läderstansset & Revolvertång 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d431",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "d9b6445f-f612-4703-9e4c-810722b2bc2b",
+      "name": "Läderstansset & Revolvertång 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d431",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "9806eefa-cb14-453b-ab3f-00f4ebd079a8",
+      "name": "Vävstol (Bordsmodell) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d433",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "1d6ede4f-0e51-47a6-b12c-8ebda4ebf10f",
+      "name": "Vävstol (Bordsmodell) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d433",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "58c213fc-cd6d-4a51-ab39-9a5371fb1bc0",
+      "name": "Klädvårds-kit (Noppborttagare Pro) 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d432",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "a372169b-bd13-4cb9-864b-bb89cf22ee8d",
+      "name": "Klädvårds-kit (Noppborttagare Pro) 2",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d432",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "4bb48245-004c-42cb-9221-fe4d59c083d5",
+      "name": "Klädvårds-kit (Noppborttagare Pro) 3",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d432",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "e2d2998e-13d0-41bb-8fe6-b1c2ba6ffa38",
+      "name": "Klädvårds-kit (Noppborttagare Pro) 4",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d432",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "5bbbadd3-ba99-41b4-9750-421ef8e4910d",
+      "name": "Klädvårds-kit (Noppborttagare Pro) 5",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d432",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    },
+    {
+      "id": "897241de-7691-457d-b0dd-67ba0ecf67db",
+      "name": "Broderimaskin 1",
+      "productId": "f47ac10b-58cc-4372-a567-0e02b2c3d427",
+      "specifics": [],
+      "lastMaintenanceDate": ""
+    }
+  ]
+}
