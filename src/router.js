@@ -1,8 +1,8 @@
 import { renderHeader } from './components/header.js';
 import { routes } from './routes.js';
 
-//gets slug, no return = DOM, loads header and view when called
-function loadView(slug) {
+//finds route by slug, renders header and view into DOM
+async function loadView(slug) {
   const route = routes.find(r => r.slug === slug);
 
   if (!route) return;
@@ -11,8 +11,8 @@ function loadView(slug) {
   renderHeader(route);
 
   //calls component and the correct view to render
-  route.component().then(module => {
-    document.querySelector('main').innerHTML = module.render(route);
+  route.component().then(async module => {
+    document.querySelector('main').innerHTML = await module.render(route);
     document.title = route.title + ' | Rentit';
   });
 }
