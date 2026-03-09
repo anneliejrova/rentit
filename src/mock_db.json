@@ -38,240 +38,241 @@
     }
   ],
   "products": [
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
-      "name": "Grovdammsugare",
-      "shortDescription": "för byggstök och garage",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 100,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567806",
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
-      ],
-      "searchWords": [
-        "Dammsugare",
-        "Rengöring",
-        "Byggdamm",
-        "Garage",
-        "Grovstäd",
-        "Våtsug"
-      ]
-    },
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
-      "name": "Våtdammsugare / Textilvårdsmaskin",
-      "shortDescription": "för soffor och mattor",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 250,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
-      ],
-      "searchWords": [
-        "Dammsugare",
-        "Tvätt",
-        "Rengöring",
-        "Mattvätt",
-        "Sofftvätt",
-        "Bilklädsel",
-        "Fläckborttagning",
-        "Möbeltvätt"
-      ]
-    },
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d403",
-      "name": "Högtryckstvätt",
-      "shortDescription": "standardmodell för hemmaprojekt",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 150,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
-      ],
-      "searchWords": [
-        "Tvätt",
-        "Rengöring",
-        "Tvätta bil",
-        "Altanstvätt",
-        "Plattvätt",
-        "Fasadtvätt"
-      ]
-    },
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d404",
-      "name": "Ångtvätt",
-      "shortDescription": "för fogar och sanering utan kemikalier",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 150,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
-      ],
-      "searchWords": [
-        "Tvätt",
-        "Rengöring",
-        "Miljövänlig städning",
-        "Ånga",
-        "Fogar",
-        "Sanera",
-        "Badrumsstäd"
-      ]
-    },
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d405",
-      "name": "Industriell Avfuktare",
-      "shortDescription": "för källare/vattenskador",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 120,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
-      ],
-      "searchWords": [
-        "Fläkt",
-        "Tork",
-        "Fukt",
-        "Vattenskada",
-        "Torka källare",
-        "Byggtork"
-      ]
-    },
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d406",
-      "name": "Robot-fönsterputsare",
-      "shortDescription": "för svåråtkomliga glaspartier",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 200,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
-      ],
-      "searchWords": [
-        "Puts",
-        "Rengöring",
-        "Fönstertvätt",
-        "Glas",
-        "Höga fönster"
-      ]
-    },
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d407",
-      "name": "Ozonmaskin",
-      "shortDescription": "för luktsanering",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 200,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
-      ],
-      "searchWords": [
-        "Sanering",
-        "Rengöring",
-        "Luktsanering",
-        "Ta bort röklukt",
-        "Mögeldoft",
-        "Bilvård"
-      ]
-    },
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d408",
-      "name": "Golvpoleringsmaskin",
-      "shortDescription": "för trä/sten",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 250,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
-      ],
-      "searchWords": [
-        "Maskin",
-        "Rengöring",
-        "Skura golv",
-        "Polera",
-        "Vaxa golv",
-        "Golvvård"
-      ]
-    },
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d409",
-      "name": "Elektrisk Mangel",
-      "shortDescription": "för lakan och dukar",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 100,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
-      ],
-      "searchWords": [
-        "Stryka",
-        "Klädvård",
-        "Lakan",
-        "Dukar",
-        "Linne",
-        "Pressa"
-      ]
-    },
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d410",
-      "name": "Professionell Steamer",
-      "shortDescription": "för klädvård",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 125,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
-      ],
-      "searchWords": [
-        "Stryka",
-        "Klädvård",
-        "Ånga kläder",
-        "Skrynkelfri",
-        "Kostym"
-      ]
-    },
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d411",
-      "name": "Rörrensningsslang",
-      "shortDescription": "tillbehör till högtryckstvätten",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 50,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
-      ],
-      "searchWords": [
-        "Rensa",
-        "Rör",
-        "Avloppsstopp",
-        "Spola avlopp"
-      ]
-    },
-    {
-      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d412",
-      "name": "Elektrisk Skoputsmaskin",
-      "shortDescription": "för säsongsvård av skor",
-      "description": null,
-      "imgUrl": null,
-      "pricePerDay": 80,
-      "categoryIds": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
-      ],
-      "searchWords": [
-        "Skovård",
-        "Skor",
-        "Läder",
-        "Glans",
-        "Polera"
-      ]
-    },
+
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d401",
+    "name": "Grovdammsugare",
+    "shortDescription": "Kraftfull sugeffekt för allt från byggdamm i garaget till grovstädning efter renoveringen.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 100,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567806",
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+    ],
+    "searchWords": [
+      "Dammsugare",
+      "Rengöring",
+      "Byggdamm",
+      "Garage",
+      "Grovstäd",
+      "Våtsug"
+    ]
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d402",
+    "name": "Våtdammsugare / Textilvårdsmaskin",
+    "shortDescription": "Ge soffan, mattan eller bilklädseln nytt liv med en djupgående textiltvätt som tar bort fläckar på djupet.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 250,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+    ],
+    "searchWords": [
+      "Dammsugare",
+      "Tvätt",
+      "Rengöring",
+      "Mattvätt",
+      "Sofftvätt",
+      "Bilklädsel",
+      "Fläckborttagning",
+      "Möbeltvätt"
+    ]
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d403",
+    "name": "Högtryckstvätt",
+    "shortDescription": "Effektiv rengöring för uteplatsen, fasaden eller bilen. Tar bort mossa och smuts på ett ögonblick.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 150,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567805"
+    ],
+    "searchWords": [
+      "Tvätt",
+      "Rengöring",
+      "Tvätta bil",
+      "Altanstvätt",
+      "Plattvätt",
+      "Fasadtvätt"
+    ]
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d404",
+    "name": "Ångtvätt",
+    "shortDescription": "Miljövänlig djuprengöring med het ånga. Perfekt för kakelfogar och sanering helt utan kemikalier.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 150,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
+    ],
+    "searchWords": [
+      "Tvätt",
+      "Rengöring",
+      "Miljövänlig städning",
+      "Ånga",
+      "Fogar",
+      "Sanera",
+      "Badrumsstäd"
+    ]
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d405",
+    "name": "Industriell Avfuktare",
+    "shortDescription": "Effektiv torkning av fuktiga källare eller vid vattenskador. Skapar ett bättre inomhusklimat snabbt.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 120,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
+    ],
+    "searchWords": [
+      "Fläkt",
+      "Tork",
+      "Fukt",
+      "Vattenskada",
+      "Torka källare",
+      "Byggtork"
+    ]
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d406",
+    "name": "Robot-fönsterputsare",
+    "shortDescription": "Låt tekniken sköta fönsterputsen på svåråtkomliga glaspartier. Skinande rent utan krångliga stegar.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 200,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
+    ],
+    "searchWords": [
+      "Puts",
+      "Rengöring",
+      "Fönstertvätt",
+      "Glas",
+      "Höga fönster"
+    ]
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d407",
+    "name": "Ozonmaskin",
+    "shortDescription": "Eliminerar effektivt oönskad lukt från rök, husdjur eller mögel i både bil och bostad.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 200,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
+    ],
+    "searchWords": [
+      "Sanering",
+      "Rengöring",
+      "Luktsanering",
+      "Ta bort röklukt",
+      "Mögeldoft",
+      "Bilvård"
+    ]
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d408",
+    "name": "Golvpoleringsmaskin",
+    "shortDescription": "Proffsmaskin som skurar och polerar trä- eller stengolv till absolut toppskick.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 250,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567806"
+    ],
+    "searchWords": [
+      "Maskin",
+      "Rengöring",
+      "Skura golv",
+      "Polera",
+      "Vaxa golv",
+      "Golvvård"
+    ]
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d409",
+    "name": "Elektrisk Mangel",
+    "shortDescription": "Få den lyxiga hotellkänslan hemma. Manglar lakan och dukar släta med perfekt press.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 100,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+    ],
+    "searchWords": [
+      "Stryka",
+      "Klädvård",
+      "Lakan",
+      "Dukar",
+      "Linne",
+      "Pressa"
+    ]
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d410",
+    "name": "Professionell Steamer",
+    "shortDescription": "Släta ut skrynklor på kostymer, klänningar och gardiner snabbt och skonsamt med kraftfull ånga.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 125,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+    ],
+    "searchWords": [
+      "Stryka",
+      "Klädvård",
+      "Ånga kläder",
+      "Skrynkelfri",
+      "Kostym"
+    ]
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d411",
+    "name": "Rörrensningsslang",
+    "shortDescription": "Lös stoppet i avloppet enkelt genom att koppla denna till din högtryckstvätt. Spolar rent på djupet.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 50,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802"
+    ],
+    "searchWords": [
+      "Rensa",
+      "Rör",
+      "Avloppsstopp",
+      "Spola avlopp"
+    ]
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d412",
+    "name": "Elektrisk Skoputsmaskin",
+    "shortDescription": "Ge dina skor den omsorg de förtjänar. Polerar och vårdar lädret till högsta glans på några sekunder.",
+    "description": null,
+    "imgUrl": null,
+    "pricePerDay": 80,
+    "categoryIds": [
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567807"
+    ],
+    "searchWords": [
+      "Skovård",
+      "Skor",
+      "Läder",
+      "Glans",
+      "Polera"
+    ]
+  }
     {
       "id": "f47ac10b-58cc-4372-a567-0e02b2c3d413",
       "name": "Takbox (Universal)",
