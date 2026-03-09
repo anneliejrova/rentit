@@ -1,6 +1,7 @@
 import { renderNav } from './nav.js';
 import { renderSearch } from './search.js';
 
+//Accepts a route and renders it accordingly
 export function renderHeader(route) {
   const header = document.querySelector("header");
 
@@ -23,7 +24,7 @@ export function renderHeader(route) {
     <div class="flex "> <!--"hidden md:flex"-->
       <div class="mr-auto">${renderSearch()}</div>
       <nav class="flex justify-between h-10 space-x-5 content-center">
-        ${renderNav(route.slug)}
+        ${renderNav(route.slug)} 
       </nav>
     </div>
 
