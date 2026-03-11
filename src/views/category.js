@@ -1,5 +1,5 @@
 export async function render(route) {
-  const response = await fetch('/src/mock_db.json');
+  const response = await fetch('/src/data.json');
   const data = await response.json();
 
   const category = data.categories.find(c => c.name === route.slug);
