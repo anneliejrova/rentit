@@ -43,8 +43,8 @@ export const routes = [
   },
   {
     slug: "product",
-    title: "Produkt",
-    headertxt: "Produkt",
+    title: "Sökresultat",
+    headertxt: "Sökresultat",
     component: () => import("./views/product.js"),
   },
 ];

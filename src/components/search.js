@@ -1,3 +1,4 @@
+import { navigate } from "../router.js";
 let cachedProducts = []; //saves products from search
 
 //Renders the search input and dropdown container
@@ -66,4 +67,11 @@ export function renderDropdown(products) {
   dropdown.innerHTML = products
     .map((product) => `<div class="dropdown-item">${product.name}</div>`)
     .join("");
+
+  //Navigate to product view on click
+  dropdown.querySelectorAll(".dropdown-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      navigate("product/" + item.dataset.id);
+    });
+  });
 }
