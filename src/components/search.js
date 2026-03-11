@@ -26,3 +26,15 @@ export async function initSearch() {
 
   console.log("Products loaded:", cachedProducts);
 }
+
+//Filters query(typed by user) and full list of products
+export function filterProducts(query, products) {
+  const q = query.toLowerCase();
+
+  //Returns products matching the query
+  return products.filter(
+    (product) =>
+      product.name.toLowerCase().includes(q) ||
+      product.searchWords.some((word) => word.toLowerCase().includes(q)),
+  );
+}
