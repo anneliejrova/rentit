@@ -1,5 +1,4 @@
 let cachedProducts = []; //saves products from search
-let cachedCategories = []; // shows categorynames inside dropdown
 
 //Renders the search input and dropdown container
 export function renderSearch() {
@@ -12,7 +11,7 @@ export function renderSearch() {
         placeholder="Sök..." 
         autocomplete="off"
       />
-      <div id="search-dropdown" class="transition-all duration-300 ease-in-out px-4"></div>
+      <div id="search-dropdown" class="transition-all duration-300 ease-in-out absolute top-full left-0 w-full bg-white shadow-lg rounded-lg z-50 px-4"></div>
     </div>
   `;
 }
@@ -22,7 +21,6 @@ export async function initSearch() {
   const response = await fetch("./src/data.json");
   const data = await response.json();
   cachedProducts = data.products;
-  cachedCategories = data.categories;
 
   const input = document.getElementById("searchInput");
 
@@ -47,11 +45,11 @@ export async function initSearch() {
 export function filterProducts(query, products) {
   const q = query.toLowerCase();
 
-  //Returns products matching the query
+  //Returns products matching the query from start of words
   return products.filter(
     (product) =>
-      product.name.toLowerCase().includes(q) ||
-      product.searchWords.some((word) => word.toLowerCase().includes(q)),
+      product.name.toLowerCase().startsWith(q) ||
+      product.searchWords.some((word) => word.toLowerCase().startsWith(q)),
   );
 }
 
