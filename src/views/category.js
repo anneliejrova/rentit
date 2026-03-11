@@ -1,3 +1,5 @@
+import { renderProducts } from '../components/renderProducts.js';
+
 export async function render(route) {
   const response = await fetch('/src/data.json');
   const data = await response.json();
@@ -6,38 +8,13 @@ export async function render(route) {
   const products = data.products.filter(p => p.categoryIds.includes(category.id));
 
   return /* html */`
-    <table>
-      <tr>
-        <th>Field</th>
-        <th>Value</th>
-      </tr>
-      <tr>
-        <td>Name</td>
-        <td>${category.name}</td>
-      </tr>
-      <tr>
-        <td>Description</td>
-        <td>${category.description}</td>
-      </tr>
-    </table>
+    <div class="p-4">
+      <h1 class="text-2xl font-bold">${category.name}</h1>
+      <p class="text-gray-600 mt-1">${category.description}</p>
+    </div>
 
-    <br>
-
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Short Description</th>
-        <th>Price per Day</th>
-        <th>Search Words</th>
-      </tr>
-      ${products.map(p => `
-        <tr>
-          <td>${p.name}</td>
-          <td>${p.shortDescription}</td>
-          <td>${p.pricePerDay}</td>
-          <td>${p.searchWords.join(', ')}</td>
-        </tr>
-      `).join('')}
-    </table>
+    <div class="p-4">
+      ${renderProducts(products)}
+    </div>
   `;
 }
