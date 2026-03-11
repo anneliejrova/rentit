@@ -1,5 +1,7 @@
 import { navigate } from "../router.js";
 let cachedProducts = []; //saves products from search
+let lastResults = []; //saves last search results
+let isInitialized = false; //prevents initSearch from running multiple times
 
 //Renders the search input and dropdown container
 export function renderSearch() {
@@ -12,16 +14,20 @@ export function renderSearch() {
         placeholder="Sök..." 
         autocomplete="off"
       />
-      <div id="search-dropdown" class="transition-all duration-300 ease-in-out absolute top-full left-0 w-full bg-white shadow-lg rounded-lg z-50 px-4"></div>
+      <div id="search-dropdown" class="transition-all duration-300 ease-in-out absolute top-full left-0 w-full bg-white shadow-lg rounded-lg z-50 px-4 pointer-coarse"></div>
     </div>
   `;
 }
 
-//Fetches products and categories from the mock JSON and caches them locally.
+//Fetches products from the mock JSON and caches them locally.
 export async function initSearch() {
-  const response = await fetch("./src/data.json");
-  const data = await response.json();
-  cachedProducts = data.products;
+  //Only fetch products once
+  if (!isInitialized) {
+    const response = await fetch("./src/data.json");
+    const data = await response.json();
+    cachedProducts = data.products;
+    isInitialized = true;
+  }
 
   const input = document.getElementById("searchInput");
 
@@ -36,15 +42,23 @@ export async function initSearch() {
     }
 
     const results = filterProducts(query, cachedProducts);
+    lastResults = results;
     renderDropdown(results);
   });
 
-  console.log("Products loaded:", cachedProducts);
+  //Navigates to product page with all matching results on enter
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && input.value) {
+      const results = filterProducts(input.value, cachedProducts);
+      navigate("product/" + results.map((p) => p.id).join(","));
+    }
+  });
 }
 
 //Filters query(typed by user) and full list of products
 export function filterProducts(query, products) {
   const q = query.toLowerCase();
+  console.log("query:", q, "products:", products.length);
 
   //Returns products matching the query from start of words
   return products.filter(
@@ -65,7 +79,10 @@ export function renderDropdown(products) {
   }
 
   dropdown.innerHTML = products
-    .map((product) => `<div class="dropdown-item">${product.name}</div>`)
+    .map(
+      (product) =>
+        `<div class="dropdown-item" data-id="${product.id}">${product.name}</div>`,
+    )
     .join("");
 
   //Navigate to product view on click
