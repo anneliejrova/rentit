@@ -12,7 +12,7 @@ export function renderSearch() {
         placeholder="Sök..." 
         autocomplete="off"
       />
-      <div id="search-dropdown"></div>
+      <div id="search-dropdown" class="transition-all duration-300 ease-in-out px-4"></div>
     </div>
   `;
 }
@@ -23,6 +23,22 @@ export async function initSearch() {
   const data = await response.json();
   cachedProducts = data.products;
   cachedCategories = data.categories;
+
+  const input = document.getElementById("searchInput");
+
+  //Listens for input and filters products on every keystroke
+  input.addEventListener("input", (e) => {
+    const query = e.target.value;
+
+    //Clears dropdown if empty input
+    if (!query) {
+      document.getElementById("search-dropdown").innerHTML = "";
+      return;
+    }
+
+    const results = filterProducts(query, cachedProducts);
+    renderDropdown(results);
+  });
 
   console.log("Products loaded:", cachedProducts);
 }
@@ -37,4 +53,19 @@ export function filterProducts(query, products) {
       product.name.toLowerCase().includes(q) ||
       product.searchWords.some((word) => word.toLowerCase().includes(q)),
   );
+}
+
+//Render filtered products as a dropdown list
+export function renderDropdown(products) {
+  const dropdown = document.getElementById("search-dropdown");
+
+  //Empty state
+  if (products.length === 0) {
+    dropdown.innerHTML = `<p>Inga produkter hittades</p>`;
+    return;
+  }
+
+  dropdown.innerHTML = products
+    .map((product) => `<div class="dropdown-item">${product.name}</div>`)
+    .join("");
 }
