@@ -1,5 +1,6 @@
 import { renderProducts } from '../components/renderProducts.js';
 
+//fetches data from json and renders category info and products
 export async function render(route) {
   const response = await fetch('/src/data.json');
   const data = await response.json();

@@ -1,5 +1,6 @@
-import { renderHeader } from "./components/header.js";
-import { routes } from "./routes.js";
+import { renderHeader } from './components/header.js';
+import { routes } from './routes.js';
+import { initToggleCartBtns } from './components/toggleCartBtn.js';
 
 //finds route by slug, renders header and view into DOM, splits slug to handle routes with id (product/123)
 async function loadView(slug) {
@@ -11,10 +12,13 @@ async function loadView(slug) {
   //renders header with content
   renderHeader(route);
 
-  //calls component and the correct view to render with route and id
+   //calls component and the correct view to render with route and id
   route.component().then(async (module) => {
     document.querySelector("main").innerHTML = await module.render(route, id);
-    document.title = route.title + " | Rentit";
+    document.title = route.title + ' | Rentit';
+
+    initToggleCartBtns(); 
+
   });
 }
 
