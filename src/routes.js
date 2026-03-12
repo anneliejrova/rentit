@@ -1,5 +1,5 @@
 export const routes = [
-  { slug: 'home',     title: 'Hem',          headertxt: "<span class='italic+'>- don't buy it!</span>",       component: () => import('./views/home.js') },
+  { slug: 'home',     title: 'Hem',          headertxt: "<em class='italic+'>- don't buy it!</em>",       component: () => import('./views/home.js') },
   { slug: 'cleaning', title: 'Städ',         headertxt: "Städ & Sanering",                                component: () => import('./views/category.js') },
   { slug: 'kitchen',  title: 'Kök',          headertxt: "Kök & Matförädling",                             component: () => import('./views/category.js') },
   { slug: 'yard',     title: 'Trädgård',     headertxt: "Trädgård & Utemiljö",                            component: () => import('./views/category.js') },

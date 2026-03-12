@@ -1,4 +1,5 @@
 import { createIcons, Trash2 } from 'lucide';
+import { toggleIncluded } from './cart';
 
 export function renderCartDropdown() {
     return /* html */`
@@ -52,6 +53,13 @@ async function renderCartItems() {
     }).join("");
 
     createIcons({ icons: { Trash2 } });
+
+    document.querySelectorAll(".cartItemCheckbox").forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+        const productId = checkbox.closest("[data-id]").dataset.id;
+        toggleIncluded(productId);
+    });
+});
 }
 
 //initiates cartDropdown
