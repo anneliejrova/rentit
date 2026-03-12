@@ -1,6 +1,6 @@
 export function renderProducts(products) {
   return /* html */`
-    <div class="grid grid-cols-1 gap-4">
+    <div class="grid grid-cols-3 gap-4">
       ${products.map(p => /* html */`
         <div class="border rounded-lg p-4 shadow-sm">
           <h2 class="text-lg font-bold">${p.name}</h2>
