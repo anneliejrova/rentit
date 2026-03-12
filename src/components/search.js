@@ -2,6 +2,7 @@ import { navigate } from "../router.js";
 let cachedProducts = []; //saves products from search
 let lastResults = []; //saves last search results
 let isInitialized = false; //prevents initSearch from running multiple times
+let dropdown; //reference to the search dropdown element
 
 //Renders the search input and dropdown container
 export function renderSearch() {
@@ -21,6 +22,7 @@ export function renderSearch() {
 
 //Fetches products from the mock JSON and caches them locally.
 export async function initSearch() {
+
   //Only fetch products once
   if (!isInitialized) {
     const response = await fetch("./src/data.json");
@@ -30,6 +32,7 @@ export async function initSearch() {
   }
 
   const input = document.getElementById("searchInput");
+  dropdown = document.getElementById("search-dropdown");
 
   //Listens for input and filters products on every keystroke
   input.addEventListener("input", (e) => {
@@ -37,7 +40,7 @@ export async function initSearch() {
 
     //Clears dropdown if empty input
     if (!query) {
-      document.getElementById("search-dropdown").innerHTML = "";
+      closeDropdown();
       return;
     }
 
@@ -49,8 +52,7 @@ export async function initSearch() {
   //Navigates to product page with all matching results on enter
   input.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && input.value) {
-      const results = filterProducts(input.value, cachedProducts);
-      navigate("product/" + results.map((p) => p.id).join(","));
+      navigate("product/" + lastResults.map((p) => p.id).join(","));
     }
   });
 }
@@ -65,7 +67,7 @@ export function filterProducts(query, products) {
     (product) =>
       product.name.toLowerCase().startsWith(q) ||
       product.searchWords.some((word) => word.toLowerCase().startsWith(q)),
-  );
+  ).slice(0,10);
 }
 
 //Render filtered products as a dropdown list
@@ -84,6 +86,8 @@ export function renderDropdown(products) {
         `<div class="dropdown-item" data-id="${product.id}">${product.name}</div>`,
     )
     .join("");
+    
+    openDropdown()
 
   //Navigate to product view on click
   dropdown.querySelectorAll(".dropdown-item").forEach((item) => {
@@ -91,4 +95,14 @@ export function renderDropdown(products) {
       navigate("product/" + item.dataset.id);
     });
   });
+}
+
+function openDropdown() {
+  dropdown.classList.remove("opacity-0", "-translate-x-4", "pointer-events-none");
+  dropdown.classList.add("opacity-100", "translate-x-0");
+}
+
+function closeDropdown() {
+  dropdown.classList.remove("opacity-100", "translate-x-0")
+  dropdown.classList.add("opacity-0", "-translate-x-4", "pointer-events-none");
 }
