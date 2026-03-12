@@ -14,7 +14,7 @@ export function initToggleCartBtns() {
 
     //checks if item is in cart before rendering the first version of the button, listens for change
     buttons.forEach(btn => {
-        let added = cart.includes(btn.dataset.id);
+        let added = cart.some(item => item.id === btn.dataset.id);
 
         if (added) {
             btn.textContent = "Ta bort";

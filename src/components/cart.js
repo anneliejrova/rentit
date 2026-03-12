@@ -12,13 +12,13 @@ function saveCart(cart) {
 // Adds a product id to the cart. Parameter is productId - string id of the product to add.
 export function addToCart(productId) {
     const cart = getCart();
-    cart.push(productId);
+    cart.push({ id: productId, included: true });
     saveCart(cart);
 }
 
 // Removes a product id from the cart. Clears localStorage if cart becomes empty. Parameter is the same productId as above.
 export function removeFromCart(productId) {
-    const cart = getCart().filter(id => id !== productId);
+    const cart = getCart().filter(item => item.id !== productId);
 
     if (cart.length === 0) {
         localStorage.removeItem("cart");
@@ -26,4 +26,5 @@ export function removeFromCart(productId) {
     } else {
         saveCart(cart);
     }
+
 }
