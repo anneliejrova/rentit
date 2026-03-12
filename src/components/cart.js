@@ -16,7 +16,7 @@ export function addToCart(productId) {
     saveCart(cart);
 }
 
-// Removes a product id from the cart. Clears localStorage if cart becomes empty. Parameter is the same productId as above.
+// Removes a product id from the cart. Clears localStorage if cart becomes empty. Parameter is string id of the product to remove.
 export function removeFromCart(productId) {
     const cart = getCart().filter(item => item.id !== productId);
 
