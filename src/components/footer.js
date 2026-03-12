@@ -1,5 +1,6 @@
 import { createIcons, icons } from 'lucide';
 
+//Renders the footer with social media icons and contact information
 export function renderFooter() {
   document.querySelector('footer').innerHTML = /*html*/`
     <div class="bg-slate-50 py-4 fixed bottom-0 w-full">

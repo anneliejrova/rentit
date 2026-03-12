@@ -9,7 +9,7 @@ export async function render(route, id) {
   const products = data.products.filter((p) => ids.includes(p.id));
 
   if (products.length === 0) {
-    return /*html*/ `<div class="px-4"><p>Inga produkter hittades</p></div>`;
+    return `<div class="px-4"><p>Inga produkter hittades</p></div>`;
   }
 
   return /*html*/ `

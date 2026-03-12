@@ -1,14 +1,15 @@
 import { renderNav } from "./nav.js";
 import { renderSearch, initSearch } from "./search.js";
 import { initCartCount } from "./cartCount.js";
+import { createIcons, icons } from 'lucide';
+import { renderMobileMenu } from "./mobileMenu.js";
 
 //Accepts a route and renders it accordingly
 export function renderHeader(route) {
   const header = document.querySelector("header");
 
   header.innerHTML = /* html */ `
-  <div class="shadow-md"> <!-- header wrapper -->
-    
+  < class="shadow-md"> <!-- header wrapper -->
     <div class="flex justify-between "> 
       <div class="bg-white px-6 py-4 flex content-center"> <!-- logo + category titel (home = slogan) -->
         <a href="/">
@@ -17,13 +18,17 @@ export function renderHeader(route) {
         <h1 class="content-center text-4xl font-bold text-gray-800 ml-6">${route.headertxt}</h1>
       </div>
    
-      <div class="md:hidden flex items-center"> <!-- hamburger -->
-        burger
+      <!--hamburger menu-->
+      <div class="md:hidden flex items-center">
+        <button id="hamburgerBtn" class="p-2">
+          <i data-lucide="menu" class="h-6 w-6"></i>
+        </button>
       </div>
-    </div>
+      ${renderMobileMenu()}
+      </div>
 
     <div class="flex "> <!--"hidden md:flex"-->
-      <div class="mr-auto">${renderSearch()}</div>  
+      <div class="mr-auto hidden md:block">${renderSearch()}</div>  
       <nav class="flex justify-between h-10 space-x-5 content-center">
         ${renderNav(route.slug)} 
       </nav>
@@ -41,4 +46,6 @@ export function renderHeader(route) {
 
   initSearch();
   initCartCount()
+  createIcons({ icons });
 }
+
