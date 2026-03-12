@@ -67,7 +67,7 @@ export function filterProducts(query, products) {
     (product) =>
       product.name.toLowerCase().startsWith(q) ||
       product.searchWords.some((word) => word.toLowerCase().startsWith(q)),
-  );
+  ).slice(0,10);
 }
 
 //Render filtered products as a dropdown list
