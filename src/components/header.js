@@ -3,13 +3,14 @@ import { renderSearch, initSearch } from "./search.js";
 import { initCartCount } from "./cartCount.js";
 import { createIcons, icons } from 'lucide';
 import { renderMobileMenu } from "./mobileMenu.js";
+import { navigate } from "../router.js";
 
 //Accepts a route and renders it accordingly
 export function renderHeader(route) {
   const header = document.querySelector("header");
 
   header.innerHTML = /* html */ `
-  < class="shadow-md"> <!-- header wrapper -->
+  <class="shadow-md"> <!-- header wrapper -->
     <div class="flex justify-between "> 
       <div class="bg-white px-6 py-4 flex content-center"> <!-- logo + category titel (home = slogan) -->
         <a href="/">
@@ -46,6 +47,7 @@ export function renderHeader(route) {
 
   initSearch();
   initCartCount()
+
   createIcons({ icons });
 
   const hamburgerBtn = document.getElementById("hamburgerBtn");
@@ -53,6 +55,23 @@ export function renderHeader(route) {
 
   hamburgerBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
+  });
+
+  //Closes menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
+
+  //Closes menu when clicking a category link
+  mobileMenu.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") {
+      mobileMenu.classList.add("hidden");
+      e.preventDefault();
+      const slug = e.target.getAttribute("href").slice(1);
+      navigate(slug);
+    }
   });
 }
 
