@@ -6,13 +6,16 @@ export function renderMobileMenu() {
   const categories = routes.filter(r => r.slug !== 'home' && r.slug !== 'product');
 
   return /*html*/`
-    <div id="mobileMenu" class="hidden md:hidden absolute right-0 bg-white shadow-lg p-4 flex flex-col gap-4 z-50">
-      ${renderSearch()}
+    <div id="mobileMenu" class="hidden md:hidden absolute right-0 max-w-lg bg-white shadow-lg p-4 flex-col gap-4 z-50">
+    <!-- search - (hidden on desktop) -->
+        <div class="block md:hidden">
+          ${renderSearch('-mobile')}
+        </div>
       <nav class="flex flex-col gap-2">
         ${categories.map(r => `
           <a href="#${r.slug}" class="py-2 border-b">${r.title}</a>
         `).join('')}
       </nav>
-   </div>
+    </div>
   `;
 }

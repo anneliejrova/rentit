@@ -21,17 +21,19 @@ export function renderHeader(route) {
    
       <!--hamburger menu-->
       <div class="md:hidden flex items-center">
-        <button id="hamburgerBtn" class="p-2">
-          <i data-lucide="menu" class="h-6 w-6"></i>
+        <button id="hamburgerBtn" class="p-6">
+          <i data-lucide="menu" class="h-6 w-6" id="menuIcon"></i>
+          <i data-lucide="x" class="h-6 w-6 hidden" id="closeIcon"></i>
         </button>
       </div>
     </div>
-    <div class="hidden md:flex"> <!--"hidden md:flex"--> 
+    <div class="hidden md:flex">
 
-       <!-- search (hidden on mobile) -->
+      <!-- search (hidden on mobile) -->
       <div class="mr-auto hidden md:flex items-center">
-        ${renderSearch()}
+        ${renderSearch('-desktop')}
       </div>
+
       <nav class="hidden md:flex justify-between h-10 space-x-5 content-center">
         ${renderNav(route.slug)} 
       </nav>
@@ -51,13 +53,16 @@ export function renderHeader(route) {
   initSearch();
   initCartCount()
   createIcons({ icons });
-
+  
   const hamburgerBtn = document.getElementById("hamburgerBtn");
   const mobileMenu = document.getElementById("mobileMenu");
 
   hamburgerBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
+  mobileMenu.classList.toggle("hidden");
+  const isOpen = !mobileMenu.classList.contains("hidden");
+  document.getElementById("menuIcon").classList.toggle("hidden", isOpen);
+  document.getElementById("closeIcon").classList.toggle("hidden", !isOpen);
+});
 
   //Closes menu when clicking outside
   document.addEventListener("click", (e) => {
