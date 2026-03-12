@@ -1,5 +1,6 @@
 import { renderNav } from "./nav.js";
 import { renderSearch, initSearch } from "./search.js";
+import { initCartCount } from "./cartCount.js";
 
 //Accepts a route and renders it accordingly
 export function renderHeader(route) {
@@ -29,7 +30,15 @@ export function renderHeader(route) {
     </div>
 
   </div>
+<div class="flex justify-end">
+  <div class="relative cursor-pointer inline-block px-6 py-4" id="cartIcon">
+    🛒
+    <span id="cartBadge" class="absolute -top-1 -right-1 bg-fuchsia-700 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+  </div>
+  <hr>
+</div>
   `;
 
   initSearch();
+  initCartCount()
 }

@@ -1,5 +1,6 @@
 import { renderHeader } from './components/header.js';
 import { routes } from './routes.js';
+import { initToggleCartBtns } from './components/toggleCartBtn.js';
 
 //finds route by slug, renders header and view into DOM
 async function loadView(slug) {
@@ -14,6 +15,8 @@ async function loadView(slug) {
   route.component().then(async module => {
     document.querySelector('main').innerHTML = await module.render(route);
     document.title = route.title + ' | Rentit';
+
+    initToggleCartBtns(); 
   });
 }
 
