@@ -1,5 +1,5 @@
 import { createIcons, Trash2 } from 'lucide';
-import { toggleIncluded } from './cart';
+import { toggleIncluded, removeFromCart} from './cart';
 
 export function renderCartDropdown() {
     return /* html */`
@@ -11,7 +11,6 @@ export function renderCartDropdown() {
         </div>
 
         <div id="cartItems" class="flex-1 overflow-y-auto">
-            <!-- produkter renderas här -->
         </div>
 
         <div class="border-t pt-4 mt-4">
@@ -55,11 +54,18 @@ async function renderCartItems() {
     createIcons({ icons: { Trash2 } });
 
     document.querySelectorAll(".cartItemCheckbox").forEach(checkbox => {
-    checkbox.addEventListener("change", () => {
-        const productId = checkbox.closest("[data-id]").dataset.id;
-        toggleIncluded(productId);
+        checkbox.addEventListener("change", () => {
+            const productId = checkbox.closest("[data-id]").dataset.id;
+            toggleIncluded(productId);
+        });
     });
-});
+    
+    document.querySelectorAll(".cartItemRemove").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const productId = btn.closest("[data-id]").dataset.id;
+            removeFromCart(productId);
+        });
+    });
 }
 
 //initiates cartDropdown
@@ -76,7 +82,8 @@ export function initCartDropdown() {
     });
 
     // Close cartDropdown with X
-    closeBtn.addEventListener("click", () => {
+    closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
         dropdown.classList.remove("flex");
         dropdown.classList.add("hidden");
     });

@@ -32,15 +32,13 @@ export function renderHeader(route) {
     </div>
 
   </div>
-<div class="flex justify-end">
- <div class="relative cursor-pointer inline-block px-6 py-4 mr-3 mt-3" id="cartIcon">
-    <i data-lucide="shopping-cart" class="w-8 h-8"></i>
-    <span id="cartBadge" class="absolute z-10 top-1 -right-1  bg-fuchsia-700 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-    ${renderCartDropdown()}
+  <div class="flex justify-end">
+    <div class="relative cursor-pointer block px-6 py-4 mr-3 mt-3" id="cartIcon">
+      <i data-lucide="shopping-cart" class="w-8 h-8"></i>
+      <span id="cartBadge" class="absolute z-10 top-1 -right-1  bg-fuchsia-700 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+      ${renderCartDropdown()}
     </div>
-  
-  <hr>
-</div>
+  </div>
   `;
 
   initSearch();
