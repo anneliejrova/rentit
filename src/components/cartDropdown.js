@@ -1,3 +1,5 @@
+import { createIcons, Trash2 } from 'lucide';
+
 export function renderCartDropdown() {
     return /* html */`
     <div id="cartDropdown" class="hidden absolute right-0 top-full w-80 bg-white shadow-xl z-50 flex-col p-6">
@@ -21,6 +23,38 @@ export function renderCartDropdown() {
     `;
 }
 
+// Fetches product data and renders cart items into the dropdown.
+async function renderCartItems() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartItemsEl = document.querySelector("#cartItems");
+
+    if (cart.length === 0) {
+        cartItemsEl.innerHTML = `<p class="text-gray-400 text-sm">Din varukorg är tom.</p>`;
+        return;
+    }
+
+    const response = await fetch("/src/data.json");
+    const data = await response.json();
+
+    cartItemsEl.innerHTML = cart.map(cartItem => {
+        const product = data.products.find(p => p.id === cartItem.id);
+        
+        return /* html */`
+        <div class="flex items-center gap-3 py-3 border-b" data-id="${product.id}">
+            <input type="checkbox" ${cartItem.included ? "checked" : ""} class="cartItemCheckbox">
+            <div class="flex-1">
+                <p class="font-semibold text-sm">${product.name}</p>
+                <p class="text-gray-500 text-xs">${product.pricePerDay} kr/dag</p>
+            </div>
+            <button class="cartItemRemove text-gray-500 hover:text-red-500"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+        </div>
+        `;
+    }).join("");
+
+    createIcons({ icons: { Trash2 } });
+}
+
+//initiates cartDropdown
 export function initCartDropdown() {
     const cartIcon = document.querySelector("#cartIcon");
     const dropdown = document.querySelector("#cartDropdown");
@@ -30,6 +64,7 @@ export function initCartDropdown() {
     cartIcon.addEventListener("click", () => {
         dropdown.classList.remove("hidden");
         dropdown.classList.add("flex");
+        renderCartItems();
     });
 
     // Close cartDropdown with X
@@ -45,4 +80,6 @@ export function initCartDropdown() {
             dropdown.classList.add("hidden");
         }
     });
+    
+    document.addEventListener("cartUpdated", renderCartItems); 
 }
