@@ -26,8 +26,12 @@ export function renderHeader(route) {
         </button>
       </div>
     </div>
-    <div class="hidden md:flex"> <!--"hidden md:flex"-->
-      <div class="mr-auto hidden md:block">${renderSearch()}</div>  
+    <div class="hidden md:flex"> <!--"hidden md:flex"--> 
+
+       <!-- search (hidden on mobile) -->
+      <div class="mr-auto hidden md:flex items-center">
+        ${renderSearch()}
+      </div>
       <nav class="hidden md:flex justify-between h-10 space-x-5 content-center">
         ${renderNav(route.slug)} 
       </nav>
@@ -46,7 +50,6 @@ export function renderHeader(route) {
 
   initSearch();
   initCartCount()
-
   createIcons({ icons });
 
   const hamburgerBtn = document.getElementById("hamburgerBtn");
