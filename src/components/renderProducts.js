@@ -1,7 +1,9 @@
+
 // Renders a product card for each product in an array. The parameter is an array of products created in the view where the function is used.
 export function renderProducts(products) {
   return /* html */`
-    <div class="grid grid-cols-1 gap-4">
+    <div class="grid grid-cols-3 gap-4">
+
       ${products.map(p => /* html */`
         <div class="border rounded-lg p-4 shadow-sm">
           <h2 class="text-lg font-bold">${p.name}</h2>
