@@ -10,7 +10,7 @@ export function renderHeader(route) {
   const header = document.querySelector("header");
 
   header.innerHTML = /* html */ `
-  <class="shadow-md"> <!-- header wrapper -->
+  <div class="shadow-md relative"> <!-- header wrapper -->
     <div class="flex justify-between "> 
       <div class="bg-white px-6 py-4 flex content-center"> <!-- logo + category titel (home = slogan) -->
         <a href="/">
@@ -25,17 +25,16 @@ export function renderHeader(route) {
           <i data-lucide="menu" class="h-6 w-6"></i>
         </button>
       </div>
-      ${renderMobileMenu()}
-      </div>
-
+    </div>
     <div class="flex "> <!--"hidden md:flex"-->
       <div class="mr-auto hidden md:block">${renderSearch()}</div>  
       <nav class="flex justify-between h-10 space-x-5 content-center">
         ${renderNav(route.slug)} 
       </nav>
     </div>
-
+    ${renderMobileMenu()}
   </div>
+  
 <div class="flex justify-end">
   <div class="relative cursor-pointer inline-block px-6 py-4" id="cartIcon">
     🛒
