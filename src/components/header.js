@@ -26,9 +26,9 @@ export function renderHeader(route) {
         </button>
       </div>
     </div>
-    <div class="flex "> <!--"hidden md:flex"-->
+    <div class="hidden md:flex"> <!--"hidden md:flex"-->
       <div class="mr-auto hidden md:block">${renderSearch()}</div>  
-      <nav class="flex justify-between h-10 space-x-5 content-center">
+      <nav class="hidden md:flex justify-between h-10 space-x-5 content-center">
         ${renderNav(route.slug)} 
       </nav>
     </div>
