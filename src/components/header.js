@@ -10,7 +10,7 @@ export function renderHeader(route) {
   const header = document.querySelector("header");
 
   header.innerHTML = /* html */ `
-  <div class="shadow-md relative"> <!-- header wrapper -->
+  <div class="shadow-md sticky top-0 z-50"> <!-- header wrapper -->
     <div class="flex justify-between "> 
       <div class="bg-white px-6 py-4 flex content-center"> <!-- logo + category titel (home = slogan) -->
         <a href="/">

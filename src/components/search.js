@@ -5,7 +5,8 @@ let lastResults = []; // Saves last search results
 let isInitialized = false; // Prevents initSearch from running multiple times
 
 // Renders the search input and dropdown container
-export function renderSearch(suffix = "") {
+export function renderSearch(suffix = "", direction = "left") {
+  const translateClass = direction === "right" ? "translate-x-0" : "-translate-x-2";
   return /*html*/ `
     <div class="relative px-4">
       <input 
@@ -15,7 +16,7 @@ export function renderSearch(suffix = "") {
         placeholder="Sök..." 
         autocomplete="off"
       />
-      <div id="search-dropdown${suffix}" class="search-dropdown transition-all duration-300 ease-in-out absolute top-full left-0 w-full bg-white shadow-lg rounded-lg z-50 px-4 opacity-0 pointer-events-none -translate-x-4"></div>
+      <div id="search-dropdown${suffix}" data-direction="${direction}" class="search-dropdown transition-all duration-300 ease-in-out absolute top-full left-0 w-full bg-white shadow-lg rounded-lg z-50 px-4 opacity-0 pointer-events-none ${translateClass}"></div>
     </div>
   `;
 }
@@ -111,11 +112,12 @@ export function renderDropdown(products, dropdownElement) {
 
 // Helper functions (fixed variable names and classes)
 function openDropdown(dropdownElement) {
-  dropdownElement.classList.remove("opacity-0", "-translate-x-4", "pointer-events-none");
+  dropdownElement.classList.remove("opacity-0", "-translate-x-4", "translate-x-4", "pointer-events-none");
   dropdownElement.classList.add("opacity-100", "translate-x-0");
 }
 
 function closeDropdown(dropdownElement) {
+  const isRight = dropdownElement.dataset.direction === "right";
   dropdownElement.classList.remove("opacity-100", "translate-x-0");
-  dropdownElement.classList.add("opacity-0", "-translate-x-4", "pointer-events-none");
+  dropdownElement.classList.add("opacity-0", "pointer-events-none", isRight? "translate-x-4" : "-translate-x-4");
 }
