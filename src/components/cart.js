@@ -12,18 +12,30 @@ function saveCart(cart) {
 // Adds a product id to the cart. Parameter is productId - string id of the product to add.
 export function addToCart(productId) {
     const cart = getCart();
-    cart.push(productId);
+    cart.push({ id: productId, included: true });
     saveCart(cart);
 }
 
-// Removes a product id from the cart. Clears localStorage if cart becomes empty. Parameter is the same productId as above.
+// Removes a product id from the cart. Clears localStorage if cart becomes empty. Parameter is string id of the product to remove.
 export function removeFromCart(productId) {
-    const cart = getCart().filter(id => id !== productId);
+    const cart = getCart().filter(item => item.id !== productId);
 
     if (cart.length === 0) {
         localStorage.removeItem("cart");
         document.dispatchEvent(new CustomEvent("cartUpdated"));
     } else {
+        saveCart(cart);
+    }
+
+}
+
+// Toggles the included state of a product in the cart. Takes in Parameter of productId - string id of the product to toggle.
+export function toggleIncluded(productId) {
+    const cart = getCart();
+    const item = cart.find(item => item.id === productId);
+    
+    if (item) {
+        item.included = !item.included;
         saveCart(cart);
     }
 }

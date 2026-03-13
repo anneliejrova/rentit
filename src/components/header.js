@@ -1,9 +1,11 @@
 import { renderNav } from "./nav.js";
 import { renderSearch, initSearch } from "./search.js";
 import { initCartCount } from "./cartCount.js";
+import { renderCartDropdown, initCartDropdown } from "./cartDropdown.js";
 import { createIcons, icons } from 'lucide';
 import { renderMobileMenu } from "./mobileMenu.js";
 import { navigate } from "../router.js";
+
 
 //Accepts a route and renders it accordingly
 export function renderHeader(route) {
@@ -40,18 +42,17 @@ export function renderHeader(route) {
     </div>
     ${renderMobileMenu()}
   </div>
-  
-<div class="flex justify-end">
-  <div class="relative cursor-pointer inline-block px-6 py-4" id="cartIcon">
-    🛒
-    <span id="cartBadge" class="absolute -top-1 -right-1 bg-fuchsia-700 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+  <div class="flex justify-end">
+    <div class="relative cursor-pointer block px-6 py-4 mr-3 mt-3" id="cartIcon">
+      <i data-lucide="shopping-cart" class="w-8 h-8"></i>
+      <span id="cartBadge" class="absolute z-10 top-1 -right-1  bg-fuchsia-700 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+      ${renderCartDropdown()}
+    </div>
   </div>
-  <hr>
-</div>
-  `;
-
+  
   initSearch();
-  initCartCount()
+  initCartCount();
+  initCartDropdown();
   createIcons({ icons });
   
   const hamburgerBtn = document.getElementById("hamburgerBtn");
