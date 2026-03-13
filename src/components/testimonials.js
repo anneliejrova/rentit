@@ -20,7 +20,7 @@ export async function renderTestimonials() {
       ${testimonials.map(t => ` 
         <div class="border rounded-lg p-4 shadow-sm">
           <img src="https://i.pravatar.cc/100?img=${t.id}" alt="${t.name}" class="w-12 h-12 rounded-full mb-2">
-          <p class="text-gray-600 mt-2">${t.message}</p>
+          <p class="text-gray-600 mt-2 line-clamp-3">${t.message}</p>
           <p class="text-yellow-500 mt-1">${'⭐'.repeat(t.rating)}</p>
         </div>
       `).join('')}
