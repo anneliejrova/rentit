@@ -1,6 +1,6 @@
 import { renderNav } from "./nav.js";
 import { renderSearch, initSearch } from "./search.js";
-import { initCartCount } from "./cartCount.js";
+import { initCartCount } from "../utils/cartCount.js";
 import { renderCartDropdown, initCartDropdown } from "./cartDropdown.js";
 import { createIcons, icons } from 'lucide';
 import { renderMobileMenu } from "./mobileMenu.js";
