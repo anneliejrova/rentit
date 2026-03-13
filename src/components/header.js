@@ -49,7 +49,8 @@ export function renderHeader(route) {
       ${renderCartDropdown()}
     </div>
   </div>
-  
+  `;
+
   initSearch();
   initCartCount();
   initCartDropdown();
