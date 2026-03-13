@@ -16,9 +16,9 @@ export function renderHeader(route) {
     <div class="flex justify-between "> 
       <div class="bg-white px-6 py-4 flex content-center"> <!-- logo + category titel (home = slogan) -->
         <a href="/">
-          <img src=../img/logo/logo.png class="w-auto h-16" alt="Rentit">
+          <img src=../img/logo/logo.png class="w-50 h-auto" alt="Rentit">
         </a>
-        <h1 class="content-center text-4xl font-bold text-gray-800 ml-6">${route.headertxt}</h1>
+        <h1 class="content-center text-2xl md:text-4xl font-bold text-gray-800 ml-6">${route.headertxt}</h1>
       </div>
    
       <!--hamburger menu-->
@@ -42,12 +42,20 @@ export function renderHeader(route) {
     </div>
     ${renderMobileMenu()}
   </div>
-  <div class="flex justify-end">
-    <div class="relative cursor-pointer block px-6 py-4 mr-3 mt-3" id="cartIcon">
-      <i data-lucide="shopping-cart" class="w-8 h-8"></i>
-      <span id="cartBadge" class="absolute z-10 top-1 -right-1  bg-fuchsia-700 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-      ${renderCartDropdown()}
+
+ <div class="flex justify-end">
+  <div class="relative cursor-pointer block px-6 py-4 mr-3 mt-3" id="cartIcon">
+    
+    <div class="absolute inset-0 bg-white rounded-full blur-md opacity-75"></div>
+    
+    <div class="relative z-10">
+      <i data-lucide="shopping-cart" class="w-8 h-8 text-black"></i>
+      <span id="cartBadge" class="absolute -top-2 -right-3 bg-fuchsia-700 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
     </div>
+
+    ${renderCartDropdown()}
+  </div>
+</div>
   </div>
   `;
 
