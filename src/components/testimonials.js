@@ -36,7 +36,6 @@ export async function renderTestimonials() {
   `;
 }
 
-
 // Translates text from English to Swedish using MyMemory API
 async function translateToSwedish(text) {
   const response = await fetch(
