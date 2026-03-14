@@ -31,11 +31,13 @@ export function removeFromCart(productId) {
 
 // Toggles the included state of a product in the cart. Takes in Parameter of productId - string id of the product to toggle.
 export function toggleIncluded(productId) {
+    
     const cart = getCart();
     const item = cart.find(item => item.id === productId);
     
     if (item) {
         item.included = !item.included;
         saveCart(cart);
+        document.dispatchEvent(new CustomEvent("includedUpdated"));
     }
 }

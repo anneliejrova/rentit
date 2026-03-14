@@ -1,5 +1,6 @@
 import { createIcons, Trash2, ShoppingCart } from "lucide";
 import { toggleIncluded, removeFromCart } from "../utils/cart.js";
+import { getData } from '../utils/data.js';
 
 let days = null;
 
@@ -34,8 +35,7 @@ async function updateTotal() {
   }
 
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const response = await fetch("/src/data.json");
-  const data = await response.json();
+  const data = await getData();
 
   const total = cart
     .filter((item) => item.included)
@@ -57,8 +57,7 @@ async function renderCartItems() {
     return;
   }
 
-  const response = await fetch("/src/data.json");
-  const data = await response.json();
+  const data = await getData();
 
   cartItemsEl.innerHTML = cart
     .map((cartItem) => {

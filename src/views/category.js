@@ -1,9 +1,9 @@
 import { renderProducts } from '../components/renderProducts.js';
+import { getData } from '../utils/data.js';
 
-//fetches data from json and renders category info and products
+// Fetches data from json and renders category info and products.
 export async function render(route) {
-  const response = await fetch('/src/data.json');
-  const data = await response.json();
+  const data = await getData();
 
   const category = data.categories.find(c => c.name === route.slug);
   const products = data.products.filter(p => p.categoryIds.includes(category.id));
@@ -17,5 +17,5 @@ export async function render(route) {
     <div class="p-4">
       ${renderProducts(products)}
     </div>
-  `;
+    `;
 }
