@@ -3,6 +3,7 @@ import { toggleIncluded, removeFromCart } from "../utils/cart.js";
 import { getData } from "../utils/data.js";
 import { renderCalendar, initCalendar, resetSelection } from "./calendar.js";
 import { assignUnits } from "../utils/availability.js";
+import { writeHold } from "../utils/checkout.js";
 
 let days = null;
 let currentSelectedDate = null;
@@ -174,6 +175,7 @@ export async function initCartDropdown() {
       expiresAt: new Date(Date.now() + 15 * 60 * 1000).toISOString()
     };
 
+    writeHold(hold);
     document.dispatchEvent(new CustomEvent("checkoutStarted", { detail: hold }));
 
     dropdown.classList.remove("flex");
