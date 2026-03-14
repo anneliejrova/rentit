@@ -4,7 +4,7 @@ import { routes } from "../routes.js";
 //Highlights the current active route with bold text
 export function renderNav(currentSlug) {
   return routes
-    .filter(r => r.slug !== 'home' && r.slug !== "product")
+    .filter(r => r.slug !== 'home' && r.slug !== "product" && r.slug !== "checkout" && r.slug !== "confirmation")
     .map(r => `
       <div class="w-px h-6 bg-gray-400"></div>
       <a href="#${r.slug}" class="${r.slug === currentSlug ? 'font-bold' : ''}">${r.title}</a>
