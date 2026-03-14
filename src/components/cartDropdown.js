@@ -1,9 +1,11 @@
 import { createIcons, icons} from "lucide";
 import { toggleIncluded, removeFromCart } from "../utils/cart.js";
 import { getData } from "../utils/data.js";
-import { renderCalendar, initCalendar } from "./calendar.js";
+import { renderCalendar, initCalendar, resetSelection } from "./calendar.js";
+import { assignUnits } from "../utils/availability.js";
 
 let days = null;
+let currentSelectedDate = null;
 
 //Renders a visual dropdown cart.
 export function renderCartDropdown() {
@@ -31,7 +33,7 @@ export function renderCartDropdown() {
     `;
 }
 
-//Updates the Total amount based on the chosen products pricePerDay and number of bookingDays
+// Updates the total amount based on included products pricePerDay and bookDays.
 async function updateTotal() {
   if (!days || days < 1) {
     document.querySelector("#cartTotal").textContent = 0;
@@ -51,7 +53,20 @@ async function updateTotal() {
   document.querySelector("#cartTotal").textContent = total;
 }
 
-// Fetches product data and renders cart items into the dropdown. Attaches event listeners for checkbox and trashcan per item.
+// Resets checkout button state and clears calendar selection.
+function resetCheckout() {
+  const checkoutBtn = document.querySelector("#checkoutBtn");
+  if (checkoutBtn) {
+    checkoutBtn.classList.add("bg-gray-300", "cursor-not-allowed");
+    checkoutBtn.classList.remove("bg-fuchsia-700", "cursor-pointer", "hover:bg-fuchsia-900");
+    checkoutBtn.disabled = true;
+  }
+  currentSelectedDate = null;
+  resetSelection();
+}
+
+// Fetches product data and renders cart items into the dropdown.
+// Attaches event listeners for checkbox and trashcan per item.
 async function renderCartItems() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const cartItemsEl = document.querySelector("#cartItems");
@@ -87,6 +102,7 @@ async function renderCartItems() {
       const productId = checkbox.closest("[data-id]").dataset.id;
       toggleIncluded(productId);
       updateTotal();
+      resetCheckout();
       initCalendar(days);
     });
   });
@@ -126,7 +142,43 @@ export async function initCartDropdown() {
     }
   });
 
-  document.addEventListener("cartUpdated", renderCartItems);
+  document.addEventListener("cartUpdated", async () => {
+    await renderCartItems();
+    resetCheckout();
+    await initCalendar(days);
+  });
+
+  document.addEventListener("dateSelected", (e) => {
+    currentSelectedDate = e.detail.date;
+    const checkoutBtn = document.querySelector("#checkoutBtn");
+    checkoutBtn.classList.remove("bg-gray-300", "cursor-not-allowed");
+    checkoutBtn.classList.add("bg-fuchsia-700", "cursor-pointer", "hover:bg-fuchsia-900");
+    checkoutBtn.disabled = false;
+  });
+
+  document.querySelector("#checkoutBtn").addEventListener("click", async (e) => {
+    e.stopPropagation();
+
+    const data = await getData();
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const includedProducts = cart.filter(item => item.included);
+    const products = data.products.filter(p => includedProducts.some(i => i.id === p.id));
+
+    const assignedUnits = assignUnits(products, data.units, currentSelectedDate, days);
+
+    const hold = {
+      id: crypto.randomUUID(),
+      startDate: currentSelectedDate,
+      bookDays: days,
+      assignments: assignedUnits,
+      expiresAt: new Date(Date.now() + 15 * 60 * 1000).toISOString()
+    };
+
+    document.dispatchEvent(new CustomEvent("checkoutStarted", { detail: hold }));
+
+    dropdown.classList.remove("flex");
+    dropdown.classList.add("hidden");
+  });
 
   const daysInput = document.querySelector("#bookDays");
 
@@ -136,6 +188,7 @@ export async function initCartDropdown() {
     if (isNaN(parsed) || daysInput.value === "") {
       days = null;
       updateTotal();
+      resetCheckout();
       await initCalendar(days);
       return;
     }
@@ -144,12 +197,14 @@ export async function initCartDropdown() {
       daysInput.value = 30;
       days = 30;
       updateTotal();
+      resetCheckout();
       await initCalendar(days);
       return;
     }
 
     days = parsed;
     updateTotal();
+    resetCheckout();
     await initCalendar(days);
   });
 

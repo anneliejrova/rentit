@@ -1,6 +1,8 @@
 import { mergeProductDates, MAX_MONTHS_AHEAD } from '../utils/availability.js';
 import { getData } from '../utils/data.js';
 
+let selectedDate = null;
+
 // Renders the calendar skeleton for a given month.
 // Parameters: year - number, month - number (0-11).
 export function renderCalendar(year = new Date().getFullYear(), month = new Date().getMonth()) {
@@ -56,16 +58,13 @@ async function renderDays(bookDays, year, month) {
     let availableDates = [];
 
     if (bookDays) {
-    const data = await getData();
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const includedProducts = cart.filter(item => item.included);
-    const products = data.products.filter(p => includedProducts.some(i => i.id === p.id));
-    console.log("includedProducts:", includedProducts);
-    console.log("products:", products);
-    const merged = mergeProductDates(products, data.units, bookDays, year, month);
-    console.log("merged:", merged);
-    availableDates = merged;
-}
+        const data = await getData();
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const includedProducts = cart.filter(item => item.included);
+        const products = data.products.filter(p => includedProducts.some(i => i.id === p.id));
+        const merged = mergeProductDates(products, data.units, bookDays, year, month);
+        availableDates = merged;
+    }
 
     const emptySlots = Array(startOffset).fill(`<div></div>`).join("");
 
@@ -86,6 +85,14 @@ async function renderDays(bookDays, year, month) {
     return emptySlots + days;
 }
 
+// Resets selected date and removes all markings in calendar
+export function resetSelection() {
+    selectedDate = null;
+    document.querySelectorAll(".calendarDay").forEach(d => {
+        d.classList.remove("bg-black", "text-white", "bg-gray-100");
+    });
+}
+
 // Initializes the calendar — fills in days and sets up month navigation.
 // Parameters: bookDays - number|null, year - number, month - number (0-11).
 export async function initCalendar(bookDays, year = new Date().getFullYear(), month = new Date().getMonth()) {
@@ -99,7 +106,6 @@ export async function initCalendar(bookDays, year = new Date().getFullYear(), mo
     const currentMonth = today.getMonth();
     const maxDate = new Date(currentYear, currentMonth + MAX_MONTHS_AHEAD, 1);
 
-    // Clone to remove old event listeners
     const prevBtn = document.querySelector("#prevMonth");
     const nextBtn = document.querySelector("#nextMonth");
     const monthSelect = document.querySelector("#monthSelect");
@@ -112,7 +118,6 @@ export async function initCalendar(bookDays, year = new Date().getFullYear(), mo
     nextBtn.replaceWith(newNext);
     monthSelect.replaceWith(newMonthSelect);
 
-    // Update dropdown to show current month
     newMonthSelect.value = `${year}-${month}`;
 
     newPrev.addEventListener("click", (e) => {
@@ -134,5 +139,38 @@ export async function initCalendar(bookDays, year = new Date().getFullYear(), mo
     newMonthSelect.addEventListener("change", (e) => {
         const [y, m] = e.target.value.split("-").map(Number);
         initCalendar(bookDays, y, m);
+    });
+
+    // Handle date selection
+    document.querySelectorAll(".calendarDay").forEach(day => {
+        day.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            // Remove old markings
+            document.querySelectorAll(".calendarDay").forEach(d => {
+                d.classList.remove("bg-black", "text-white", "bg-gray-100");
+            });
+
+            selectedDate = day.dataset.date;
+
+            // Solid circle on selected date
+            day.classList.add("bg-black", "text-white", "rounded-full");
+
+            // Lighter circles on bookDays-1 consecutive days
+            if (bookDays) {
+                const start = new Date(selectedDate);
+                for (let i = 1; i < bookDays; i++) {
+                    const next = new Date(start);
+                    next.setDate(start.getDate() + i);
+                    const nextStr = next.toISOString().split("T")[0];
+                    const nextEl = document.querySelector(`[data-date="${nextStr}"]`);
+                    if (nextEl) {
+                        nextEl.classList.add("bg-gray-100", "rounded-full");
+                    }
+                }
+            }
+
+            document.dispatchEvent(new CustomEvent("dateSelected", { detail: { date: selectedDate } }));
+        });
     });
 }
