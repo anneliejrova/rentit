@@ -20,8 +20,7 @@ export async function renderTestimonials() {
       ...t,
       message: await translateToSwedish(t.message),
     }))
-  ); translated instead of testimonial
- */
+  ); 
 
   return /*html*/ `
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
@@ -43,4 +42,4 @@ async function translateToSwedish(text) {
   );
   const data = await response.json();
   return data.responseData.translatedText;
-}*/
+}
