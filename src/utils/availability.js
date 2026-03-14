@@ -97,3 +97,59 @@ export function mergeProductDates(products, units, bookDays, year, month) {
 
     return productDates;
 }
+
+// Assigns the best available unit for each included product on a given start date.
+// Parameters: products - array, units - array, startDate - string YYYY-MM-DD, bookDays - number.
+// Returns array of { productId, unitId }.
+export function assignUnits(products, units, startDate, bookDays) {
+    const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+    const nextMonthEnd = new Date(startDate);
+    nextMonthEnd.setMonth(nextMonthEnd.getMonth() + 2);
+    nextMonthEnd.setDate(0);
+
+    return products.map(product => {
+        const productUnits = getItemsForProduct(units, product.id);
+
+        // Filter to only available units on startDate
+        const availableUnits = productUnits.filter(unit => {
+            const blockedPeriods = getBlockedPeriods(unit.id);
+            const totalDays = bookDays + unit.maintenanceRequirement.bufferDays;
+            const periodStart = new Date(startDate);
+            const periodEnd = new Date(startDate);
+            periodEnd.setDate(periodEnd.getDate() + totalDays - 1);
+
+            return !blockedPeriods.some(period => {
+                const bStart = new Date(period.startDate);
+                const bEnd = new Date(period.endDate);
+                return periodStart <= bEnd && periodEnd >= bStart;
+            });
+        });
+
+        // Sort by tiebreak rules
+        availableUnits.sort((a, b) => {
+            // 1. Most bookings to end of next month
+            const aBookings = bookings.filter(bk => 
+                bk.unitId === a.id && new Date(bk.startDate) <= nextMonthEnd
+            ).length;
+            const bBookings = bookings.filter(bk => 
+                bk.unitId === b.id && new Date(bk.startDate) <= nextMonthEnd
+            ).length;
+
+            if (bBookings !== aBookings) return bBookings - aBookings;
+
+            // 2. Most bufferDays
+            const aBuf = a.maintenanceRequirement.bufferDays;
+            const bBuf = b.maintenanceRequirement.bufferDays;
+
+            if (bBuf !== aBuf) return bBuf - aBuf;
+
+            // 3. Random
+            return Math.random() - 0.5;
+        });
+
+        return {
+            productId: product.id,
+            unitId: availableUnits[0]?.id || null
+        };
+    });
+}
