@@ -1,4 +1,4 @@
-import { getHold, clearHold } from '../utils/checkout.js';
+import { getHold, clearHold, confirmBooking } from '../utils/checkout.js';
 import { getData } from '../utils/data.js';
 import { navigate } from '../router.js';
 
@@ -83,7 +83,7 @@ export async function render() {
         <div class="border rounded-lg p-4 mb-6">
             <div class="flex justify-between font-bold text-lg">
                 <span>Totalt</span>
-               <span id="checkoutTotal" data-base="${totalPrice}">${totalPrice} kr</span>
+                <span id="checkoutTotal" data-base="${totalPrice}">${totalPrice} kr</span>
             </div>
             <p class="text-xs text-gray-400 mt-1">Exkl. leverans</p>
         </div>
@@ -111,6 +111,7 @@ export function initCheckout() {
     const hold = getHold();
     if (!hold) return;
 
+    // Start countdown timer based on hold expiry time.
     const timerEl = document.querySelector("#checkoutTimer");
     const expiresAt = new Date(hold.expiresAt).getTime();
 
@@ -128,6 +129,7 @@ export function initCheckout() {
         timerEl.textContent = `Din reservation är giltig i ${mins}:${secs.toString().padStart(2, '0')}`;
     }, 1000);
 
+    // Update total price when shipping option changes.
     document.querySelectorAll("input[name='shipping']").forEach(radio => {
         radio.addEventListener("change", () => {
             const base = parseInt(document.querySelector("#checkoutTotal").dataset.base);
@@ -136,6 +138,7 @@ export function initCheckout() {
         });
     });
 
+    // Activate Book Now button when terms are accepted.
     document.querySelector("#termsCheckbox").addEventListener("change", (e) => {
         const bookNowBtn = document.querySelector("#bookNowBtn");
         if (e.target.checked) {
@@ -149,13 +152,17 @@ export function initCheckout() {
         }
     });
 
+    // Cancel button clears hold and navigates home.
     document.querySelector("#cancelBtn").addEventListener("click", () => {
         clearInterval(countdown);
         clearHold();
         navigate("home");
     });
 
-    document.querySelector("#bookNowBtn").addEventListener("click", () => {
+    // Book Now button confirms booking and navigates home.
+    document.querySelector("#bookNowBtn").addEventListener("click", async () => {
         clearInterval(countdown);
+        await confirmBooking();
+        navigate("confirmation");
     });
 }
