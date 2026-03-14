@@ -99,19 +99,39 @@ export async function initCalendar(bookDays, year = new Date().getFullYear(), mo
     const currentMonth = today.getMonth();
     const maxDate = new Date(currentYear, currentMonth + MAX_MONTHS_AHEAD, 1);
 
-    document.querySelector("#prevMonth").addEventListener("click", () => {
+    // Clone to remove old event listeners
+    const prevBtn = document.querySelector("#prevMonth");
+    const nextBtn = document.querySelector("#nextMonth");
+    const monthSelect = document.querySelector("#monthSelect");
+
+    const newPrev = prevBtn.cloneNode(true);
+    const newNext = nextBtn.cloneNode(true);
+    const newMonthSelect = monthSelect.cloneNode(true);
+
+    prevBtn.replaceWith(newPrev);
+    nextBtn.replaceWith(newNext);
+    monthSelect.replaceWith(newMonthSelect);
+
+    // Update dropdown to show current month
+    newMonthSelect.value = `${year}-${month}`;
+
+    newPrev.addEventListener("click", (e) => {
+        e.stopPropagation();
         const newDate = new Date(year, month - 1);
         if (newDate < new Date(currentYear, currentMonth)) return;
+        newMonthSelect.value = `${newDate.getFullYear()}-${newDate.getMonth()}`;
         initCalendar(bookDays, newDate.getFullYear(), newDate.getMonth());
     });
 
-    document.querySelector("#nextMonth").addEventListener("click", () => {
+    newNext.addEventListener("click", (e) => {
+        e.stopPropagation();
         const newDate = new Date(year, month + 1);
         if (newDate >= maxDate) return;
+        newMonthSelect.value = `${newDate.getFullYear()}-${newDate.getMonth()}`;
         initCalendar(bookDays, newDate.getFullYear(), newDate.getMonth());
     });
 
-    document.querySelector("#monthSelect").addEventListener("change", (e) => {
+    newMonthSelect.addEventListener("change", (e) => {
         const [y, m] = e.target.value.split("-").map(Number);
         initCalendar(bookDays, y, m);
     });
