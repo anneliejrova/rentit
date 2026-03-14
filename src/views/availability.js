@@ -63,7 +63,7 @@ export function getAvailableStartDates(unit, bookDays, year, month) {
 // Merges available start dates across all units for a product.
 // Parameters: units - array of unit objects, bookDays - number, year - number, month - number (0-11).
 // Returns array of { date, unitCount, unitIds }.
-export function mergeAvailableDates(units, bookDays, year, month) {
+export function mergeUnitDates(units, bookDays, year, month) {
     const dateMap = {};
 
     units.forEach(unit => {
@@ -79,4 +79,18 @@ export function mergeAvailableDates(units, bookDays, year, month) {
     });
 
     return Object.values(dateMap).sort((a, b) => a.date.localeCompare(b.date));
+}
+
+export function mergeProductDates(products, units, bookDays, year, month) {
+    const allProductDates = products.map(product => {
+        const productUnits = units.filter(u => u.productId === product.id);
+        const unitDates = mergeUnitDates(productUnits, bookDays, year, month);
+        return unitDates.map(d => d.date);
+    });
+
+    const productDates = allProductDates.reduce((common, dates) => {
+        return common.filter(date => dates.includes(date));
+    });
+
+    return productDates;
 }
