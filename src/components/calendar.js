@@ -85,6 +85,14 @@ async function renderDays(bookDays, year, month) {
     return emptySlots + days;
 }
 
+// Resets selected date and removes all markings in calendar
+export function resetSelection() {
+    selectedDate = null;
+    document.querySelectorAll(".calendarDay").forEach(d => {
+        d.classList.remove("bg-black", "text-white", "bg-gray-100");
+    });
+}
+
 // Initializes the calendar — fills in days and sets up month navigation.
 // Parameters: bookDays - number|null, year - number, month - number (0-11).
 export async function initCalendar(bookDays, year = new Date().getFullYear(), month = new Date().getMonth()) {

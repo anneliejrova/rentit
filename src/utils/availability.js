@@ -82,6 +82,9 @@ export function mergeUnitDates(units, bookDays, year, month) {
 }
 
 export function mergeProductDates(products, units, bookDays, year, month) {
+    
+    if (!products.length) return [];
+
     const allProductDates = products.map(product => {
         const productUnits = units.filter(u => u.productId === product.id);
         const unitDates = mergeUnitDates(productUnits, bookDays, year, month);

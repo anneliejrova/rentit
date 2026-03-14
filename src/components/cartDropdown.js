@@ -1,7 +1,7 @@
 import { createIcons, icons} from "lucide";
 import { toggleIncluded, removeFromCart } from "../utils/cart.js";
 import { getData } from "../utils/data.js";
-import { renderCalendar, initCalendar } from "./calendar.js";
+import { renderCalendar, initCalendar, resetSelection } from "./calendar.js";
 
 let days = null;
 
@@ -51,6 +51,17 @@ async function updateTotal() {
   document.querySelector("#cartTotal").textContent = total;
 }
 
+// Resets checkout button and calendar selection.
+function resetCheckout() {
+  const checkoutBtn = document.querySelector("#checkoutBtn");
+  if (checkoutBtn) {
+    checkoutBtn.classList.add("bg-gray-300", "cursor-not-allowed");
+    checkoutBtn.classList.remove("bg-fuchsia-700", "cursor-pointer", "hover:bg-fuchsia-900");
+    checkoutBtn.disabled = true;
+  }
+  resetSelection();
+}
+
 // Fetches product data and renders cart items into the dropdown. Attaches event listeners for checkbox and trashcan per item.
 async function renderCartItems() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -87,6 +98,7 @@ async function renderCartItems() {
       const productId = checkbox.closest("[data-id]").dataset.id;
       toggleIncluded(productId);
       updateTotal();
+      resetCheckout();
       initCalendar(days);
     });
   });
@@ -126,7 +138,18 @@ export async function initCartDropdown() {
     }
   });
 
-  document.addEventListener("cartUpdated", renderCartItems);
+  document.addEventListener("cartUpdated", async () => {
+    await renderCartItems();
+    resetCheckout();
+    await initCalendar(days);
+  });
+
+  document.addEventListener("dateSelected", () => {
+    const checkoutBtn = document.querySelector("#checkoutBtn");
+    checkoutBtn.classList.remove("bg-gray-300", "cursor-not-allowed");
+    checkoutBtn.classList.add("bg-fuchsia-700", "cursor-pointer", "hover:bg-fuchsia-900");
+    checkoutBtn.disabled = false;
+  });
 
   const daysInput = document.querySelector("#bookDays");
 
@@ -136,6 +159,7 @@ export async function initCartDropdown() {
     if (isNaN(parsed) || daysInput.value === "") {
       days = null;
       updateTotal();
+      resetCheckout();
       await initCalendar(days);
       return;
     }
@@ -144,12 +168,14 @@ export async function initCartDropdown() {
       daysInput.value = 30;
       days = 30;
       updateTotal();
+      resetCheckout();
       await initCalendar(days);
       return;
     }
 
     days = parsed;
     updateTotal();
+    resetCheckout();
     await initCalendar(days);
   });
 
