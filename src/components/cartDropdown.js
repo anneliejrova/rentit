@@ -1,4 +1,4 @@
-import { createIcons, Trash2, ShoppingCart } from "lucide";
+import { createIcons, icons} from "lucide";
 import { toggleIncluded, removeFromCart } from "../utils/cart.js";
 import { getData } from '../utils/data.js';
 
@@ -76,7 +76,7 @@ async function renderCartItems() {
     })
     .join("");
 
-  createIcons({ icons: { Trash2, ShoppingCart } });
+  createIcons({ icons });
 
   document.querySelectorAll(".cartItemCheckbox").forEach((checkbox) => {
     checkbox.addEventListener("change", () => {

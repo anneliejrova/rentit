@@ -43,20 +43,16 @@ export function renderHeader(route) {
     ${renderMobileMenu()}
   </div>
 
- <div class="flex justify-end">
+<div class="flex justify-end relative">
   <div class="relative cursor-pointer block px-6 py-4 mr-3 mt-3" id="cartIcon">
-    
     <div class="absolute inset-0 bg-white rounded-full blur-md opacity-75"></div>
-    
-    <div class="relative z-10">
-      <i data-lucide="shopping-cart" class="w-8 h-8 text-black"></i>
+    <div class="relative z-20">
+      <i data-lucide="shopping-cart" class="w-8 h-8 text-black pointer-events-none"></i>
       <span id="cartBadge" class="absolute -top-2 -right-3 bg-fuchsia-700 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
     </div>
-
-    ${renderCartDropdown()}
   </div>
+  ${renderCartDropdown()}
 </div>
-  </div>
   `;
 
   initSearch();
