@@ -1,28 +1,33 @@
-import { createIcons, Trash2, ShoppingCart } from "lucide";
+import { createIcons, icons} from "lucide";
 import { toggleIncluded, removeFromCart } from "../utils/cart.js";
+import { getData } from "../utils/data.js";
+import { renderCalendar, initCalendar } from "./calendar.js";
 
 let days = null;
 
-//Renders a visual droppdown cart.
+//Renders a visual dropdown cart.
 export function renderCartDropdown() {
   return /* html */ `
-    <div id="cartDropdown" class="hidden absolute right-0 top-full w-80 bg-white shadow-xl z-50 flex-col p-6">
-        
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-lg font-bold">Din varukorg</h2>
-            <button id="closeCart" class="text-gray-400 hover:text-gray-600 text-xl">✕</button>
-        </div>
-
-        <div id="cartItems" class="flex-1 overflow-y-auto">
-        </div>
-
-        <div class="border-t pt-4 mt-4">
-            <p class="text-gray-600">Antal dagar: <input type="number" id="bookDays" min="1" max="30" class="w-16 border rounded px-2 py-1 ml-2"></p>
-            <p class="text-lg font-bold mt-2">Totalt: <span id="cartTotal">0</span> kr</p>
-            <button id="checkoutBtn" class="w-full mt-4 px-4 py-2 rounded text-white bg-gray-300 cursor-not-allowed" disabled>Gå vidare till checkout</button>
-        </div>
-
+<div id="cartDropdown" class="hidden absolute right-0 top-full w-80 bg-white shadow-xl z-50 flex-col flex-1 space-y-2 p-6 max-h-[65vh] overflow-y-auto">
+    
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-bold">Din varukorg</h2>
+        <button id="closeCart" class="text-gray-400 hover:text-gray-600 text-xl">✕</button>
     </div>
+
+    <p class="text-gray-900 font-bold text-1 text-center">Välj produkter och dagar för att se <br> lediga startdatum för din bokning<p>
+
+    <div id="cartItems" class="flex-1">
+    </div>
+
+    <div class="border-t pt-6 mt-4">
+        <p class="text-gray-600">Antal dagar: <input type="number" id="bookDays" min="1" max="30" class="w-16 border rounded px-2 py-1 ml-2 mb-5"></p>
+        ${renderCalendar()}
+        <p class="text-lg font-bold mt-2">Totalt: <span id="cartTotal">0</span> kr</p>
+        <button id="checkoutBtn" class="w-full mt-4 px-4 py-2 rounded text-white bg-gray-300 cursor-not-allowed" disabled>Gå vidare till checkout</button>
+    </div>
+
+</div>
     `;
 }
 
@@ -34,8 +39,7 @@ async function updateTotal() {
   }
 
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const response = await fetch("/src/data.json");
-  const data = await response.json();
+  const data = await getData();
 
   const total = cart
     .filter((item) => item.included)
@@ -57,15 +61,14 @@ async function renderCartItems() {
     return;
   }
 
-  const response = await fetch("/src/data.json");
-  const data = await response.json();
+  const data = await getData();
 
   cartItemsEl.innerHTML = cart
     .map((cartItem) => {
       const product = data.products.find((p) => p.id === cartItem.id);
 
       return /* html */ `
-        <div class="flex items-center gap-3 py-3 border-b" data-id="${product.id}">
+        <div class="flex items-center gap-3 py-3 border-b last:border-b-0" data-id="${product.id}">
             <input type="checkbox" ${cartItem.included ? "checked" : ""} class="cartItemCheckbox">
             <div class="flex-1">
                 <p class="font-semibold text-sm">${product.name}</p>
@@ -77,13 +80,14 @@ async function renderCartItems() {
     })
     .join("");
 
-  createIcons({ icons: { Trash2, ShoppingCart } });
+  createIcons({ icons });
 
   document.querySelectorAll(".cartItemCheckbox").forEach((checkbox) => {
     checkbox.addEventListener("change", () => {
       const productId = checkbox.closest("[data-id]").dataset.id;
       toggleIncluded(productId);
       updateTotal();
+      initCalendar(days);
     });
   });
 
@@ -98,7 +102,7 @@ async function renderCartItems() {
 }
 
 // Initiates the cartDropdown, handles open/close and listens to cart and day changes.
-export function initCartDropdown() {
+export async function initCartDropdown() {
   const cartIcon = document.querySelector("#cartIcon");
   const dropdown = document.querySelector("#cartDropdown");
   const closeBtn = document.querySelector("#closeCart");
@@ -126,12 +130,13 @@ export function initCartDropdown() {
 
   const daysInput = document.querySelector("#bookDays");
 
-  daysInput.addEventListener("input", () => {
+  daysInput.addEventListener("input", async () => {
     const parsed = parseInt(daysInput.value);
 
     if (isNaN(parsed) || daysInput.value === "") {
       days = null;
       updateTotal();
+      await initCalendar(days);
       return;
     }
 
@@ -139,10 +144,14 @@ export function initCartDropdown() {
       daysInput.value = 30;
       days = 30;
       updateTotal();
+      await initCalendar(days);
       return;
     }
 
     days = parsed;
     updateTotal();
+    await initCalendar(days);
   });
+
+  await initCalendar(days);
 }

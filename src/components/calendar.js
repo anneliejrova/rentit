@@ -1,0 +1,138 @@
+import { mergeProductDates, MAX_MONTHS_AHEAD } from '../utils/availability.js';
+import { getData } from '../utils/data.js';
+
+// Renders the calendar skeleton for a given month.
+// Parameters: year - number, month - number (0-11).
+export function renderCalendar(year = new Date().getFullYear(), month = new Date().getMonth()) {
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    const currentMonth = today.getMonth();
+
+    const monthNames = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", 
+                        "Juli", "Augusti", "September", "Oktober", "November", "December"];
+
+    const dayNames = ["Mån", "Tis", "Ons", "Tor", "Fre", "Lör", "Sön"];
+
+    return /* html */`
+    <div id="calendar" class="w-full mt-4">
+        
+        <div class="flex justify-between items-center mb-2">
+            <button id="prevMonth" class="px-2 py-1 text-gray-400 hover:text-black">‹</button>
+            
+            <select id="monthSelect" class="text-sm font-semibold border rounded px-2 py-1">
+                ${Array.from({ length: MAX_MONTHS_AHEAD }, (_, i) => {
+                    const d = new Date(currentYear, currentMonth + i);
+                    const val = `${d.getFullYear()}-${d.getMonth()}`;
+                    const selected = d.getFullYear() === year && d.getMonth() === month ? "selected" : "";
+                    return `<option value="${val}" ${selected}>${monthNames[d.getMonth()]} ${d.getFullYear()}</option>`;
+                }).join("")}
+            </select>
+
+            <button id="nextMonth" class="px-2 py-1 text-gray-400 hover:text-black">›</button>
+        </div>
+
+        <div class="grid grid-cols-7 text-center text-xs text-gray-400 mb-1">
+            ${dayNames.map(d => `<div>${d}</div>`).join("")}
+        </div>
+
+        <div id="calendarDays" class="grid grid-cols-7 text-center text-sm">
+        </div>
+
+    </div>
+    `;
+}
+
+// Renders the days of a month with availability highlighting.
+// Parameters: bookDays - number|null, year - number, month - number (0-11).
+async function renderDays(bookDays, year, month) {
+    const firstDay = new Date(year, month, 1);
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    let startOffset = firstDay.getDay() - 1;
+    if (startOffset < 0) startOffset = 6;
+
+    let availableDates = [];
+
+    if (bookDays) {
+    const data = await getData();
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const includedProducts = cart.filter(item => item.included);
+    const products = data.products.filter(p => includedProducts.some(i => i.id === p.id));
+    console.log("includedProducts:", includedProducts);
+    console.log("products:", products);
+    const merged = mergeProductDates(products, data.units, bookDays, year, month);
+    console.log("merged:", merged);
+    availableDates = merged;
+}
+
+    const emptySlots = Array(startOffset).fill(`<div></div>`).join("");
+
+    const days = Array.from({ length: daysInMonth }, (_, i) => {
+        const day = i + 1;
+        const date = new Date(year, month, day);
+        const dateStr = date.toISOString().split("T")[0];
+        const isPast = date < today;
+        const isAvailable = availableDates.includes(dateStr);
+
+        if (isPast || !isAvailable) {
+            return `<div class="py-1 text-gray-300 cursor-not-allowed">${day}</div>`;
+        }
+
+        return `<div class="py-1 text-black cursor-pointer hover:ring-1 hover:ring-gray-300 rounded-full calendarDay" data-date="${dateStr}">${day}</div>`;
+    }).join("");
+
+    return emptySlots + days;
+}
+
+// Initializes the calendar — fills in days and sets up month navigation.
+// Parameters: bookDays - number|null, year - number, month - number (0-11).
+export async function initCalendar(bookDays, year = new Date().getFullYear(), month = new Date().getMonth()) {
+    const calendarDays = document.querySelector("#calendarDays");
+    if (!calendarDays) return;
+
+    calendarDays.innerHTML = await renderDays(bookDays, year, month);
+
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    const currentMonth = today.getMonth();
+    const maxDate = new Date(currentYear, currentMonth + MAX_MONTHS_AHEAD, 1);
+
+    // Clone to remove old event listeners
+    const prevBtn = document.querySelector("#prevMonth");
+    const nextBtn = document.querySelector("#nextMonth");
+    const monthSelect = document.querySelector("#monthSelect");
+
+    const newPrev = prevBtn.cloneNode(true);
+    const newNext = nextBtn.cloneNode(true);
+    const newMonthSelect = monthSelect.cloneNode(true);
+
+    prevBtn.replaceWith(newPrev);
+    nextBtn.replaceWith(newNext);
+    monthSelect.replaceWith(newMonthSelect);
+
+    // Update dropdown to show current month
+    newMonthSelect.value = `${year}-${month}`;
+
+    newPrev.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const newDate = new Date(year, month - 1);
+        if (newDate < new Date(currentYear, currentMonth)) return;
+        newMonthSelect.value = `${newDate.getFullYear()}-${newDate.getMonth()}`;
+        initCalendar(bookDays, newDate.getFullYear(), newDate.getMonth());
+    });
+
+    newNext.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const newDate = new Date(year, month + 1);
+        if (newDate >= maxDate) return;
+        newMonthSelect.value = `${newDate.getFullYear()}-${newDate.getMonth()}`;
+        initCalendar(bookDays, newDate.getFullYear(), newDate.getMonth());
+    });
+
+    newMonthSelect.addEventListener("change", (e) => {
+        const [y, m] = e.target.value.split("-").map(Number);
+        initCalendar(bookDays, y, m);
+    });
+}
