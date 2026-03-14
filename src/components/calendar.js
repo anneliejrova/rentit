@@ -1,9 +1,9 @@
-import { mergeAvailableDates, getItemsForProduct, MAX_MONTHS_AHEAD } from '../utils/availability.js';
+import { mergeProductDates, MAX_MONTHS_AHEAD } from '../utils/availability.js';
 import { getData } from '../utils/data.js';
 
-// Renders the calendar skeleton for a given product and month.
-// Parameters: productId - string, year - number, month - number (0-11).
-export function renderCalendar(productId, year = new Date().getFullYear(), month = new Date().getMonth()) {
+// Renders the calendar skeleton for a given month.
+// Parameters: year - number, month - number (0-11).
+export function renderCalendar(year = new Date().getFullYear(), month = new Date().getMonth()) {
     const today = new Date();
     const currentYear = today.getFullYear();
     const currentMonth = today.getMonth();
@@ -43,8 +43,8 @@ export function renderCalendar(productId, year = new Date().getFullYear(), month
 }
 
 // Renders the days of a month with availability highlighting.
-// Parameters: productId - string, bookDays - number|null, year - number, month - number (0-11).
-async function renderDays(productId, bookDays, year, month) {
+// Parameters: bookDays - number|null, year - number, month - number (0-11).
+async function renderDays(bookDays, year, month) {
     const firstDay = new Date(year, month, 1);
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const today = new Date();
@@ -56,11 +56,16 @@ async function renderDays(productId, bookDays, year, month) {
     let availableDates = [];
 
     if (bookDays) {
-        const data = await getData();
-        const units = getItemsForProduct(data.units, productId);
-        const merged = mergeAvailableDates(units, bookDays, year, month);
-        availableDates = merged.map(d => d.date);
-    }
+    const data = await getData();
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const includedProducts = cart.filter(item => item.included);
+    const products = data.products.filter(p => includedProducts.some(i => i.id === p.id));
+    console.log("includedProducts:", includedProducts);
+    console.log("products:", products);
+    const merged = mergeProductDates(products, data.units, bookDays, year, month);
+    console.log("merged:", merged);
+    availableDates = merged;
+}
 
     const emptySlots = Array(startOffset).fill(`<div></div>`).join("");
 
@@ -82,12 +87,12 @@ async function renderDays(productId, bookDays, year, month) {
 }
 
 // Initializes the calendar — fills in days and sets up month navigation.
-// Parameters: productId - string, bookDays - number|null, year - number, month - number (0-11).
-export async function initCalendar(productId, bookDays, year = new Date().getFullYear(), month = new Date().getMonth()) {
+// Parameters: bookDays - number|null, year - number, month - number (0-11).
+export async function initCalendar(bookDays, year = new Date().getFullYear(), month = new Date().getMonth()) {
     const calendarDays = document.querySelector("#calendarDays");
     if (!calendarDays) return;
 
-    calendarDays.innerHTML = await renderDays(productId, bookDays, year, month);
+    calendarDays.innerHTML = await renderDays(bookDays, year, month);
 
     const today = new Date();
     const currentYear = today.getFullYear();
@@ -97,17 +102,17 @@ export async function initCalendar(productId, bookDays, year = new Date().getFul
     document.querySelector("#prevMonth").addEventListener("click", () => {
         const newDate = new Date(year, month - 1);
         if (newDate < new Date(currentYear, currentMonth)) return;
-        initCalendar(productId, bookDays, newDate.getFullYear(), newDate.getMonth());
+        initCalendar(bookDays, newDate.getFullYear(), newDate.getMonth());
     });
 
     document.querySelector("#nextMonth").addEventListener("click", () => {
         const newDate = new Date(year, month + 1);
         if (newDate >= maxDate) return;
-        initCalendar(productId, bookDays, newDate.getFullYear(), newDate.getMonth());
+        initCalendar(bookDays, newDate.getFullYear(), newDate.getMonth());
     });
 
     document.querySelector("#monthSelect").addEventListener("change", (e) => {
         const [y, m] = e.target.value.split("-").map(Number);
-        initCalendar(productId, bookDays, y, m);
+        initCalendar(bookDays, y, m);
     });
 }
