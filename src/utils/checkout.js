@@ -50,6 +50,16 @@ export async function confirmBooking() {
     localStorage.setItem("bookings", JSON.stringify(bookings));
     localStorage.setItem("service", JSON.stringify(service));
 
+    // Remove included products from cart after booking.
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const updatedCart = cart.filter(item => !item.included);
+
+    if (updatedCart.length === 0) {
+        localStorage.removeItem("cart");
+    } else {
+        localStorage.setItem("cart", JSON.stringify(updatedCart));
+}
+
     clearHold();
 }
 

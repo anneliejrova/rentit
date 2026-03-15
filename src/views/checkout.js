@@ -46,7 +46,9 @@ export async function render() {
         <div class="border rounded-lg p-4 mb-6">
             <h2 class="font-bold text-lg mb-3">Kontaktuppgifter</h2>
             <div class="flex flex-col gap-3">
-                <input type="text" id="checkoutName" placeholder="Namn" class="border rounded px-3 py-2 text-sm">
+                <input type="text" id="checkoutFirstName" placeholder="Förnamn" class="border rounded px-3 py-2 text-sm">
+                <input type="text" id="checkoutLastName" placeholder="Efternamn" class="border rounded px-3 py-2 text-sm">
+                <input type="text" id="checkoutEmail" placeholder="Email" class="border rounded px-3 py-2 text-sm">
                 <input type="tel" id="checkoutPhone" placeholder="Telefonnummer" class="border rounded px-3 py-2 text-sm">
                 <input type="text" id="checkoutAddress" placeholder="Adress" class="border rounded px-3 py-2 text-sm">
                 <div class="flex gap-3">
@@ -58,14 +60,14 @@ export async function render() {
 
         <div class="border rounded-lg p-4 mb-6">
             <h2 class="font-bold text-lg mb-3">Leverans</h2>
-            <label class="flex items-center gap-3 py-2 cursor-pointer">
-                <input type="radio" name="shipping" value="pickup" checked class="w-4 h-4">
-                <span class="text-sm">Upphämtning — 0 kr</span>
-            </label>
-            <label class="flex items-center gap-3 py-2 cursor-pointer">
-                <input type="radio" name="shipping" value="delivery" class="w-4 h-4">
-                <span class="text-sm">Leverans — ${SHIPPING_PRICE} kr</span>
-            </label>
+            <label class="flex items-center gap-3 py-2 cursor-pointer w-full">
+    <input type="radio" name="shipping" value="pickup" checked class="w-4 h-4">
+    <span class="text-sm">Upphämtning — 0 kr</span>
+</label>
+<label class="flex items-center gap-3 py-2 cursor-pointer w-full">
+    <input type="radio" name="shipping" value="delivery" class="w-4 h-4">
+    <span class="text-sm">Leverans — ${SHIPPING_PRICE} kr</span>
+</label>
         </div>
 
         <div class="border rounded-lg p-4 mb-6">
@@ -85,7 +87,7 @@ export async function render() {
                 <span>Totalt</span>
                 <span id="checkoutTotal" data-base="${totalPrice}">${totalPrice} kr</span>
             </div>
-            <p class="text-xs text-gray-400 mt-1">Exkl. leverans</p>
+            <p id="shippingNote" class="text-xs text-gray-400 mt-1">Exkl. leverans</p>
         </div>
 
         <div class="mb-6">
@@ -130,13 +132,15 @@ export function initCheckout() {
     }, 1000);
 
     // Update total price when shipping option changes.
-    document.querySelectorAll("input[name='shipping']").forEach(radio => {
-        radio.addEventListener("change", () => {
-            const base = parseInt(document.querySelector("#checkoutTotal").dataset.base);
-            const shipping = radio.value === "delivery" ? SHIPPING_PRICE : 0;
-            document.querySelector("#checkoutTotal").textContent = `${base + shipping} kr`;
-        });
+   document.querySelectorAll("input[name='shipping']").forEach(radio => {
+    radio.addEventListener("change", () => {
+        const base = parseInt(document.querySelector("#checkoutTotal").dataset.base);
+        const shipping = radio.value === "delivery" ? SHIPPING_PRICE : 0;
+        document.querySelector("#checkoutTotal").textContent = `${base + shipping} kr`;
+        document.querySelector("#shippingNote").textContent = 
+            radio.value === "delivery" ? "Inkl. leverans" : "Exkl. leverans";
     });
+});
 
     // Activate Book Now button when terms are accepted.
     document.querySelector("#termsCheckbox").addEventListener("change", (e) => {
