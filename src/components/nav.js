@@ -1,12 +1,34 @@
 import { routes } from "../routes.js";
+import { getData } from "../utils/data.js";
 
-//Renders navigation links for all routes except home and product
-//Highlights the current active route with bold text
-export function renderNav(currentSlug) {
-  return routes
-    .filter(r => r.slug !== 'home' && r.slug !== "product" && r.slug !== "checkout" && r.slug !== "confirmation")
-    .map(r => `
-      <div class="w-px h-6 bg-gray-400"></div>
-      <a href="#${r.slug}" class="${r.slug === currentSlug ? 'font-bold' : ''}">${r.title}</a>
-    `).join('') + `<div class="w-px h-6 bg-gray-400"></div>`;
+// Renders navigation links for all routes except home, product, checkout and confirmation.
+// Returns links HTML, accentColor and accentColorLight for the active category.
+export async function renderNav(currentSlug) {
+  const data = await getData();
+  const categoryRoutes = routes.filter(r => 
+    r.slug !== 'home' && 
+    r.slug !== "product" && 
+    r.slug !== "checkout" && 
+    r.slug !== "confirmation"
+  );
+
+  const activeCategory = data.categories.find(c => c.name === currentSlug);
+  const accentColor = activeCategory?.accentColor || null;
+  const accentColorLight = activeCategory?.accentColorLight || null;
+
+  const links = categoryRoutes.map(r => {
+    const category = data.categories.find(c => c.name === r.slug);
+    const color = category?.accentColor || '#6b7280';
+    const isActive = r.slug === currentSlug;
+
+    return `
+      <a href="#${r.slug}" 
+        class="px-8 rounded-t flex items-center ${isActive ? 'font-bold h-10' : 'h-8'}"
+        style="background-color: ${color}; color: white;">
+        ${r.title}
+      </a>
+    `;
+  }).join('');
+
+  return { links, accentColor, accentColorLight };
 }
