@@ -14,6 +14,7 @@ export function renderHeader(route) {
   header.innerHTML = /* html */ `
 
   <div class="shadow-md  bg-white"> <!-- header wrapper -->
+  
     <div class="flex justify-between "> 
       <div class="bg-white px-6 py-4 flex content-center"> <!-- logo + category titel (home = slogan) -->
         <a href="/">

@@ -20,7 +20,11 @@ export async function renderTestimonials() {
       ...t,
       message: await translateToSwedish(t.message),
     }))
+<<<<<<< Updated upstream
   ); 
+=======
+  );
+>>>>>>> Stashed changes
 
   return /*html*/ `
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
