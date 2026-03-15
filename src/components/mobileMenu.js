@@ -3,7 +3,13 @@ import { renderSearch} from "./search.js";
 
 //Renders the mobile menu with category links and search
 export function renderMobileMenu() {
-  const categories = routes.filter(r => r.slug !== 'home' && r.slug !== 'product');
+ 
+  const categories = routes.filter(r => 
+    r.slug !== 'home' && 
+    r.slug !== "product" && 
+    r.slug !== "checkout" && 
+    r.slug !== "confirmation"
+  );
 
   return /*html*/`
     <div id="mobileMenu" class="hidden md:hidden absolute right-0 max-w-lg bg-white shadow-lg p-4 flex-col gap-4 z-50">
