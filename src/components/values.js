@@ -16,7 +16,7 @@ export function renderValues() {
 
     <div class="w-25 mt-16 mb-16">
       <img src="./img/icons/icons3.png" alt=""/>
-      <p>Spara plats i förrådet<p>
+      <p>Mer plats i förrådet<p>
     </div>
   </div>
 </section>
