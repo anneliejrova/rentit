@@ -21,7 +21,7 @@ export function renderHero() {
     <h1 class="text-3xl font-bold font-serif leading-relaxed">Allt du behöver -</h1>
     <p class="text-2xl leading-relaxed font-serif"><em>när du behöver det</em></p><br>
     <p class="text-lg/7">Hyr verktyg, köksredskap, trädgårdsmaskiner och mycket annat. Spara pengar, minska utsläpp och slipp problemet att förvara saker du bara använder en gång om året.</p>
-    <button class="bg-stone-700 text-white px-8 py-3 rounded text-sm tracking-wide hover:opacity-80 transition-opacity cursor-pointer m-8">Så här fungerar det</button>
+    <button onclick="document.getElementById('info-section').scrollIntoView({behavior: 'smooth'})" class="bg-stone-700 text-white px-8 py-3 rounded text-sm tracking-wide hover:opacity-80 transition-opacity cursor-pointer m-8">Så här gör du</button>
   </div>
 </section>
 `;

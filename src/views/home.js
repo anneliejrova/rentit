@@ -18,5 +18,9 @@ export async function render(route) {
       <h2 class="text-2xl font-bold text-center mb-4">Vad våra kunder säger</h2>
       ${testimonials}
     </section>
+
+    <div id="info-section">
+      <p class="text-center text-2xl">Så här gör du!</p>
+    </div>
   `;
 }
