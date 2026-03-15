@@ -3,37 +3,49 @@
     {
         "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
         "name": "cleaning",
-        "imgUrl": null,
+        "accentColor": "#D4A017",
+        "accentColorLight": "#FFFAE6",
+        "imgUrl": "../img/cleaning..png",
         "description": "Djuprengöring som känns – för både hemmet och samvetet. Ibland räcker inte den vanliga dammsugaren till. I vår städkategori hittar du maskinerna som tar bort fläckar du trodde var permanenta och ger nytt liv åt slitna textilier. Från mattvättar som gör underverk för soffan till ozonmaskiner som raderar oönskad lukt – vi ger dig verktygen för ett renare och mer hälsosamt hem. Att vårda det man redan äger är det enklaste sättet att leva hållbart."
     },
     {
         "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567803",
         "name": "leisure",
-        "imgUrl": null,
+        "accentColor": "#7B5EA7",
+        "accentColorLight": "#F2EEFB",
+        "imgUrl": "../img/leisure.png",
         "description": "Skapa oförglömliga minnen och stora upplevelser. Livet handlar om äventyren och de sociala stunderna. Här har vi samlat allt som sätter guldkant på fritiden – från takboxar för skidresan och SUP-brädor för sommarstunder, till partytält och popcornmaskiner som gör festen till ett snackis. Varför köpa utrustning som bara används en gång om året? Hyra är det perfekta sättet att testa en ny hobby eller maximera feststämningen utan att belasta miljön med onödiga inköp."
     },
     {
         "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567807",
         "name": "textile",
-        "imgUrl": null,
+        "accentColor": "#C0356A",
+        "accentColorLight": "#FCEEF4",
+        "imgUrl": "../img/textile.png",
         "description": "Vårda, laga och skapa med hantverksglädje. I en värld av 'fast fashion' väljer vi hantverket. Den här kategorin är för dig som vill rädda en favoritjacka, sy egna kläder med proffsfinish eller skapa unik textilkonst. Vi har maskinerna som klarar allt från tunnaste trikå till kraftigt läder. Genom att hyra våra specialmaskiner, som tuftingpistoler eller overlocks, får du tillgång till kreativitet utan att behöva investera i dyr och skrymmande utrustning."
     },
     {
         "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567804",
         "name": "kitchen",
-        "imgUrl": null,
+        "accentColor": "#2A6CB5",
+        "accentColorLight": "#EAF2FB",
+        "imgUrl": "../img/kitchen.png",
         "description": "Ta tillvara på säsongens smaker och minska matsvinnet. Välkommen till ett kök utan gränser. Här hittar du utrustningen som förvandlar trädgårdens skörd till vinterns delikatesser. Oavsett om du vill frystorka mat för äventyret, ångkoka saft som förr i tiden eller skapa restaurangmagi med sous vide, så finns prylarna här. Vi brinner för matförädling och vill göra det enkelt för alla att konservera, förädla och njuta av äkta råvaror året om."
     },
     {
         "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567805",
         "name": "yard",
-        "imgUrl": null,
+        "accentColor": "#3A7D1E",
+        "accentColorLight": "#EDF7E6",
+        "imgUrl": "../img/yard.png",
         "description": "Grönskande resultat utan krångel. Gör trädgårdsarbetet till ett nöje istället för ett slit. Våra trädgårdsmaskiner hjälper dig att väcka gräsmattan till liv på våren, beskära träden på hösten och klyva veden inför vintern. Istället för att låta en jordfräs ta upp plats i garaget året runt, hyr du en välservad maskin av oss när jorden ska vändas. Det är smart för din trädgård, din plånbok och planeten."
     },
     {
         "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567806",
         "name": "tools",
-        "imgUrl": null,
+        "accentColor": "#E85D04",
+        "accentColorLight": "#FFF3EB",
+        "imgUrl": "../img/tools.png",
         "description": "Förverkliga dina hemmaprojekt utan att fylla förrådet. Oavsett om du ska sätta upp en tavla i en betongvägg, bygga en ny altan eller slipa ner ett loppisfynd, har vi de robusta proffsverktygen som gör jobbet åt dig. Vi tror på kraften i att fixa själv och erbjuder maskiner som är servade, smorda och redo för nästa utmaning. Varför äga en borrhammare som ligger i en låda 364 dagar om året när du kan hyra kraften precis när du behöver den?"
     }
 ],
