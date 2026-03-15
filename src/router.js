@@ -1,3 +1,4 @@
+// router.js
 import { renderHeader } from './components/header.js';
 import { routes } from './routes.js';
 import { initToggleCartBtns } from './components/toggleCartBtn.js';
@@ -10,7 +11,7 @@ async function loadView(slug) {
   if (!route) return;
 
   // Renders header with content.
-  renderHeader(route);
+  await renderHeader(route);
 
   // Calls component and the correct view to render with route and id.
   route.component().then(async (module) => {
