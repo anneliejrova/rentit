@@ -17,9 +17,9 @@ export async function render(route) {
 
   return /* html */ `
  
-    <div class="p-17 bg-[var(--accent)] rounded-2xl mb-8 flex gap-8 mx-auto items-center w-[60vw] shadow-2xl">
+    <div class="p-17 bg-(--accent) rounded-2xl mb-8 flex gap-8 mx-auto items-center w-[60vw] shadow-2xl">
     ${category.imgUrl? `
-        <img src="${category.imgUrl}" alt="${category.name}" class="w-64 h-66 object-cover rounded-xl flex-shrink-0 shadow-md">
+        <img src="${category.imgUrl}" alt="${category.name}" class="w-64 h-66 object-cover rounded-xl shrink-0 shadow-md">
     `: ""
     }
     <div class="flex flex-col gap-3">

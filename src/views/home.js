@@ -1,6 +1,7 @@
 import { renderTestimonials } from '../components/testimonials.js';
 import { renderHero } from '../components/hero.js';
 import { renderValues } from '../components/values.js';
+import { renderHowTo } from '../components/howTo.js';
 
 export async function render(route) {
   const testimonials = await renderTestimonials();
@@ -14,13 +15,15 @@ export async function render(route) {
 
     <section>${renderValues()}</section>
 
-    <section class="py-8">
+    <section class="py-8" id="info-section">
       <h2 class="text-2xl font-bold text-center mb-4">Vad våra kunder säger</h2>
       ${testimonials}
     </section>
 
-    <div id="info-section">
-      <p class="text-center text-2xl">Så här gör du!</p>
-    </div>
+   
+    <section >
+    ${renderHowTo()}
+    </section>
+   
   `;
 }

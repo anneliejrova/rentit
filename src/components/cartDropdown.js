@@ -11,13 +11,13 @@ let currentSelectedDate = null;
 //Renders a visual dropdown cart.
 export function renderCartDropdown() {
   return /* html */ `
-<div id="cartDropdown" class="hidden absolute rounded-2xl right-0 top-full w-80 bg-white shadow-xl z-50 flex-col flex-1 space-y-2 p-6 w-[350px] max-h-[68vh] overflow-y-auto">
+<div id="cartDropdown" class="hidden absolute rounded-2xl right-0 top-full w-80 bg-white shadow-xl z-50 flex-col flex-1 space-y-2 p-6 max-h-[68vh] overflow-y-auto">
     
     <div class="flex justify-between items-center mb-4">
-        <h2 class="text-2xl font-bold">Din varukorg</h2>
+        <h2 class="text-xl font-bold">Din varukorg</h2>
         <button id="closeCart" class="text-gray-400 hover:text-gray-600 text-xl">✕</button>
     </div>
-<br>
+
     <p class="text-gray-900 text-1 font-semibold text-center">Välj produkter och dagar, max 30, för att se lediga <em>startdatum</em> för din bokning<p>
 
     <div id="cartItems" class="flex-1">
