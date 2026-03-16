@@ -16,7 +16,7 @@ export async function renderHeader(route) {
     <div class="flex justify-between">
       <div class="px-6 py-4 flex content-center">
         <a href="/">
-          <img src=../img/logo/logo.png class="w-50 h-auto" alt="Rentit">
+          <img src="/img/logo/logo.png" class="main-logo w-32 h-auto" alt="Rentit">
         </a>
         <h1 class="content-center text-2xl md:text-4xl font-bold text-gray-800 ml-6">${route.headertxt}</h1>
       </div>
