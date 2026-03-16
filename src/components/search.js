@@ -11,7 +11,7 @@ export function renderSearch(suffix = "", direction = "left") {
     <div class="relative px-4">
       <input 
         id="searchInput${suffix}" 
-        class="search-input bg-transparent border rounded-lg px-4 py-1 w-full" 
+        class="search-input bg-transparent border rounded-lg px-4 py-1 mb-4 w-70" 
         type="text" 
         placeholder="Sök..." 
         autocomplete="off"
