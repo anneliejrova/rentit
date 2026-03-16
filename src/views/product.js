@@ -1,4 +1,4 @@
-import { renderProducts } from "../components/renderProducts.js";
+import { renderProducts } from "../components/productCards.js";
 
 //Renders product cards based on ids from URL
 export async function render(route, id) {
@@ -14,7 +14,6 @@ export async function render(route, id) {
 
   return /*html*/ `
     <div class="px-4">
-      <h1 class="text-center py-4">Sökresultat</h1>
       ${renderProducts(products)}
     </div>
   `;

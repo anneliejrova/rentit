@@ -12,11 +12,11 @@ export async function renderHeader(route) {
   const { links, accentColor } = await renderNav(route.slug);
 
   header.innerHTML = /* html */ `
-  <div class="shadow-md bg-[var(--site-bg)]">
+  <div class="shadow-md bg-[#F8F7F4]">
     <div class="flex justify-between">
       <div class="px-6 py-4 flex content-center">
         <a href="/">
-          <img src="/img/logo/logo.png" class="main-logo w-32 h-auto" alt="Rentit">
+          <img src="/img/logo/logo.png" class="w-50 h-auto" alt="Rentit">
         </a>
         <h1 class="content-center text-2xl md:text-4xl font-bold text-gray-800 ml-6">${route.headertxt}</h1>
       </div>
@@ -33,7 +33,7 @@ export async function renderHeader(route) {
       <div class="mr-auto hidden md:flex items-center">
         ${renderSearch("-desktop")}
       </div>
-      <nav class="hidden md:flex justify-between items-end">
+      <nav class="hidden md:flex justify-between items-end gap-[1px]">
         ${links}
       </nav>
     </div>
