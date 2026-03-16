@@ -1,8 +1,6 @@
 import { addToCart, removeFromCart } from "../utils/cart.js";
 
-const baseClasses = ["px-4", "py-2", "rounded", "text-white"];
-const addClasses = ["bg-cyan-400", "hover:bg-cyan-600"];
-const removeClasses = ["bg-fuchsia-700", "hover:bg-fuchsia-900"];
+const baseClasses = ["px-4", "py-2", "rounded", "text-white", "ring-2", "bold"];
 
 // Syncs all toggle buttons with current cart state in localStorage.
 function syncToggleBtns() {
@@ -14,12 +12,12 @@ function syncToggleBtns() {
 
     if (inCart) {
       btn.textContent = "Ta bort";
-      btn.classList.remove(...addClasses);
-      btn.classList.add(...removeClasses);
+      btn.style.backgroundColor = "var(--accent-light)";
+      btn.style.color = "var(--accent)";
     } else {
       btn.textContent = "Lägg till";
-      btn.classList.remove(...removeClasses);
-      btn.classList.add(...addClasses);
+      btn.style.backgroundColor = "var(--accent)";
+      btn.style.color = "var(--accent-light)";
     }
   });
 }
@@ -38,11 +36,21 @@ export function initToggleCartBtns() {
 
     if (inCart) {
       btn.textContent = "Ta bort";
-      btn.classList.add(...removeClasses);
+      btn.style.color = "var(--accent)";
+      btn.style.backgroundColor = "var(--accent-light)";
     } else {
       btn.textContent = "Lägg till";
-      btn.classList.add(...addClasses);
+      btn.style.color = "var(--accent-light)";
+      btn.style.backgroundColor = "var(--accent)";
     }
+
+   btn.addEventListener("mouseenter", () => {
+    btn.style.filter = "brightness(0.85)";
+});
+
+btn.addEventListener("mouseleave", () => {
+    btn.style.filter = "brightness(1)";
+});
 
     // Adds or removes product from cart on click.
     btn.addEventListener("click", () => {
