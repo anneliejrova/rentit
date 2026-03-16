@@ -19,9 +19,9 @@ export function renderCalendar(year = new Date().getFullYear(), month = new Date
     <div id="calendar" class="w-full mt-4">
         
         <div class="flex justify-between items-center mb-2">
-            <button id="prevMonth" class="px-2 py-1 text-gray-400 hover:text-black">‹</button>
+            <button id="prevMonth" class="px-2 py-1 text-gray-600 hover:text-black">‹</button>
             
-            <select id="monthSelect" class="text-sm font-semibold border rounded px-2 py-1">
+            <select id="monthSelect" class="text-m border rounded-xl px-2 py-1">
                 ${Array.from({ length: MAX_MONTHS_AHEAD }, (_, i) => {
                     const d = new Date(currentYear, currentMonth + i);
                     const val = `${d.getFullYear()}-${d.getMonth()}`;
@@ -30,7 +30,7 @@ export function renderCalendar(year = new Date().getFullYear(), month = new Date
                 }).join("")}
             </select>
 
-            <button id="nextMonth" class="px-2 py-1 text-gray-400 hover:text-black">›</button>
+            <button id="nextMonth" class="px-2 py-1 text-gray-600 hover:text-black">›</button>
         </div>
 
         <div class="grid grid-cols-7 text-center text-xs text-gray-400 mb-1">

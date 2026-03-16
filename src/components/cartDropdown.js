@@ -11,22 +11,22 @@ let currentSelectedDate = null;
 //Renders a visual dropdown cart.
 export function renderCartDropdown() {
   return /* html */ `
-<div id="cartDropdown" class="hidden absolute right-0 top-full w-80 bg-white shadow-xl z-50 flex-col flex-1 space-y-2 p-6 max-h-[65vh] overflow-y-auto">
+<div id="cartDropdown" class="hidden absolute rounded-2xl right-0 top-full w-80 bg-white shadow-xl z-50 flex-col flex-1 space-y-2 p-6 w-[350px] max-h-[68vh] overflow-y-auto">
     
     <div class="flex justify-between items-center mb-4">
-        <h2 class="text-lg font-bold">Din varukorg</h2>
+        <h2 class="text-2xl font-bold">Din varukorg</h2>
         <button id="closeCart" class="text-gray-400 hover:text-gray-600 text-xl">✕</button>
     </div>
-
-    <p class="text-gray-900 font-bold text-1 text-center">Välj produkter och dagar för att se <br> lediga startdatum för din bokning<p>
+<br>
+    <p class="text-gray-900 text-1 font-semibold text-center">Välj produkter och dagar, max 30, för att se lediga <em>startdatum</em> för din bokning<p>
 
     <div id="cartItems" class="flex-1">
     </div>
 
     <div class="border-t pt-6 mt-4">
-        <p class="text-gray-600">Antal dagar: <input type="number" id="bookDays" min="1" max="30" class="w-16 border rounded px-2 py-1 ml-2 mb-5"></p>
+        <p class="font-semibold">Antal dagar: <input type="number" id="bookDays" min="1" max="30" class="w-16 border rounded px-2 py-1 ml-2 mb-5"></p>
         ${renderCalendar()}
-        <p class="text-lg font-bold mt-2">Totalt: <span id="cartTotal">0</span> kr</p>
+        <p class="text-xl mt-2 text-right">Totalt: <span id="cartTotal">0</span> kr</p>
         <button id="checkoutBtn" class="w-full mt-4 px-4 py-2 rounded text-white bg-gray-300 cursor-not-allowed" disabled>Gå vidare till checkout</button>
     </div>
 
@@ -73,7 +73,7 @@ async function renderCartItems() {
   const cartItemsEl = document.querySelector("#cartItems");
 
   if (cart.length === 0) {
-    cartItemsEl.innerHTML = `<p class="text-gray-400 text-sm">Din varukorg är tom.</p>`;
+    cartItemsEl.innerHTML = `<p class="text-sm">Din varukorg är tom.</p>`;
     return;
   }
 
@@ -87,7 +87,7 @@ async function renderCartItems() {
         <div class="flex items-center gap-3 py-3 border-b last:border-b-0" data-id="${product.id}">
             <input type="checkbox" ${cartItem.included ? "checked" : ""} class="cartItemCheckbox">
             <div class="flex-1">
-                <p class="font-semibold text-sm">${product.name}</p>
+                <p class="text-m">${product.name}</p>
                 <p class="text-gray-500 text-xs">${product.pricePerDay} kr/dag</p>
             </div>
             <button class="cartItemRemove text-gray-500 hover:text-red-500"><i data-lucide="trash-2" class="w-4 h-4"></i></button>

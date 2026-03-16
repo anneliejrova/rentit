@@ -21,7 +21,7 @@ export async function renderHeader(route) {
         <h1 class="content-center text-2xl md:text-4xl font-bold text-gray-800 ml-6">${route.headertxt}</h1>
       </div>
    
-      <div class="md:hidden flex items-center">
+      <div class="lg:hidden flex items-center">
         <button id="hamburgerBtn" class="p-6">
           <i data-lucide="menu" class="h-6 w-6" id="menuIcon"></i>
           <i data-lucide="x" class="h-6 w-6 hidden" id="closeIcon"></i>
@@ -29,11 +29,11 @@ export async function renderHeader(route) {
       </div>
     </div>
 
-    <div class="hidden md:flex items-end">
-      <div class="mr-auto hidden md:flex items-center">
+    <div class="hidden lg:flex items-end">
+      <div class="mr-auto hidden lg:flex items-center">
         ${renderSearch("-desktop")}
       </div>
-      <nav class="hidden md:flex justify-between items-end gap-[1px]">
+      <nav class="hidden lg:flex justify-between items-end gap-[1px]">
         ${links}
       </nav>
     </div>
