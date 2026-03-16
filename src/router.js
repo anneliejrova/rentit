@@ -13,6 +13,7 @@ async function loadView(slug) {
   // Reset accent colors on navigation
   document.body.style.removeProperty('--accent');
   document.body.style.removeProperty('--accent-light');
+  document.body.style.removeProperty('--site-bg');
 
   // Renders header with content.
   await renderHeader(route);

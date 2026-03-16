@@ -20,7 +20,7 @@ export default {
     extend: {
         colors: {
             accent: 'var(--accent)',
-            accentLight: 'var(--accent-light)'
+            'accent-light': 'var(--accent-light)'
         }
     }
   },  

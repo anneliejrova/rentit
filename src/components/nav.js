@@ -23,7 +23,7 @@ export async function renderNav(currentSlug) {
 
     return `
       <a href="#${r.slug}" 
-        class="px-8 rounded-t flex items-center ${isActive ? 'font-bold h-10' : 'h-8'}"
+        class="px-8 rounded-t flex items-center ${isActive ? 'h-10 text-xl' : 'h-8 hover:h-10 hover:text-xl'}"
         style="background-color: ${color}; color: white;">
         ${r.title}
       </a>
