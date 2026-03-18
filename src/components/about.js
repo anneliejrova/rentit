@@ -6,7 +6,8 @@ export function renderAbout() {
       <p class="text-2xl">
         <p class="text-xl">Rentit – Varför äga när du kan hyra?</p>
         <p class="text-xl">Äg projektet, inte prylarna!</p>
-        <p class="text-lg">Rentit är din lokala partner för allt det där du behöver – men bara ibland. Genom att hyra cirkulärt minskar vi tillsammans både svinn och onödiga inköp. Oavsett om du ska rädda skörden med en saftmaja, klyva vinterveden eller fixa altanen med proffsverktyg, ser vi till att du har rätt grejer på plats. Alltid servat, alltid hållbart, upphämtning eller direkt till din dörr.</p>
+        <p class="text-xl">Rentit är din lokala partner för allt det där du behöver – men bara ibland. Genom att hyra cirkulärt minskar vi tillsammans både svinn och onödiga inköp. Oavsett om du ska rädda skörden med en saftmaja, klyva vinterveden eller fixa altanen med proffsverktyg, ser vi till att du har rätt grejer på plats. <p>
+        <p class="text-xl">Alltid servat, alltid hållbart, upphämtning eller direkt till din dörr.</p>
       </p>
     </div>
     </div>

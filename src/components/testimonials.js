@@ -1,3 +1,4 @@
+import { escapeHtml } from '../utils/helpers.js';
 
 // Fetches 3 random testimonials from the API. Creates an array of all available IDs, then shuffles them randomly and picks the first 3 to ensure no duplicate testimonials are shown.
 async function fetchTestimonials() {
@@ -27,16 +28,15 @@ export async function renderTestimonials() {
     );
 
     // Returns the HTML for the testimonials section. Maps over the translated testimonials and builds a card for each one displaying the avatar, name, message and star rating. The join('') combines all cards into a single string. The grid layout shows one column on mobile and three columns on desktop.
-    //We are well aware of security risks with innerHTML without some kind of sanitation.
     return /*html*/ `
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-        ${translated.map(t => `
-          <div class="border rounded-lg p-4 shadow-sm">
-            <img src="https://i.pravatar.cc/100?img=${t.id}" alt="${t.name}" class="w-12 h-12 rounded-full mb-2">
-            <p class="font-bold">${t.name}</p>
-            <p class="text-gray-600 mt-2 line-clamp-3">${t.message}</p>
+      ${translated.map(t => /*html*/`
+        <div class="border rounded-lg p-4 shadow-sm">
+            <img src="https://i.pravatar.cc/100?img=${escapeHtml(String(t.id))}" alt="${escapeHtml(t.name)}" class="w-12 h-12 rounded-full mb-2">
+            <p class="font-bold">${escapeHtml(t.name)}</p>
+            <p class="mt-2 line-clamp-3">${escapeHtml(t.message)}</p>
             <p class="text-yellow-500 mt-1">${'⭐'.repeat(t.rating)}</p>
-          </div>
+        </div>
         `).join('')}
       </div>
     `;
@@ -45,7 +45,7 @@ export async function renderTestimonials() {
     catch (error) {
     console.error("Could not load testimonials:", error);
     return /*html*/ `
-      <div class="p-4 text-center text-gray-500">
+      <div class="p-4 text-center">
         <p>Kunde inte ladda recensioner just nu. Försök igen senare.</p>
       </div>
     `;

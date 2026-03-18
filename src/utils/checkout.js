@@ -1,3 +1,22 @@
+import { escapeHtml } from './helpers.js';
+
+// Sanitizes and validates user input from checkout form.
+// Returns sanitized object or null if required fields are missing.
+export function sanitizeBookingData() {
+    const name = escapeHtml(document.querySelector("#checkoutFirstName")?.value.trim());
+    const lastName = escapeHtml(document.querySelector("#checkoutLastName")?.value.trim());
+    const email = escapeHtml(document.querySelector("#checkoutEmail")?.value.trim());
+    const phone = escapeHtml(document.querySelector("#checkoutPhone")?.value.trim());
+    const address = escapeHtml(document.querySelector("#checkoutAddress")?.value.trim());
+    const zip = escapeHtml(document.querySelector("#checkoutZip")?.value.trim());
+    const city = escapeHtml(document.querySelector("#checkoutCity")?.value.trim());
+
+    // Validate required fields
+    if (!name || !lastName || !email || !address || !zip || !city) return null;
+
+    return { name, lastName, email, phone, address, zip, city };
+}
+
 // Writes a hold object to localStorage.
 // Parameter: hold - hold object with id, startDate, bookDays, assignments and expiresAt.
 export function writeHold(hold) {
@@ -14,10 +33,13 @@ export function getHold() {
     return JSON.parse(localStorage.getItem("hold"));
 }
 
-// Confirms booking — moves hold to bookings array, creates service entries, clears hold.
+// Confirms booking — sanitizes customer data, moves hold to bookings array, creates service entries, clears hold.
 export async function confirmBooking() {
     const hold = getHold();
     if (!hold) return;
+
+    const customerData = sanitizeBookingData();
+    if (!customerData) return;
 
     const { getData } = await import('./data.js');
     const data = await getData();
@@ -32,7 +54,8 @@ export async function confirmBooking() {
             productId: assignment.productId,
             startDate: hold.startDate,
             endDate: getEndDate(hold.startDate, hold.bookDays),
-            status: "confirmed"
+            status: "confirmed",
+            customer: customerData
         });
 
         const unit = data.units.find(u => u.id === assignment.unitId);
@@ -58,7 +81,7 @@ export async function confirmBooking() {
         localStorage.removeItem("cart");
     } else {
         localStorage.setItem("cart", JSON.stringify(updatedCart));
-}
+    }
 
     clearHold();
 }
