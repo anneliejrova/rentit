@@ -1,9 +1,10 @@
 import { routes } from "../routes.js";
 import { renderSearch} from "./search.js";
 
-//Renders the mobile menu with category links and search
+// Renders the mobile menu with category links and search
 export function renderMobileMenu() {
- 
+  
+  // Filters out pages to only show navigation links for actual categories
   const categories = routes.filter(r => 
     r.slug !== 'home' && 
     r.slug !== "product" && 

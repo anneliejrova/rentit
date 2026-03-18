@@ -5,7 +5,11 @@ let lastResults = []; // Saves last search results
 let isInitialized = false; // Prevents initSearch from running multiple times
 
 // Renders the search input and dropdown container
+// Suffix allows multiple search inputs on the same page (e.g. desktop and mobile)
+// Direction controls which way the dropdown slides in - "left" or "right"
 export function renderSearch(suffix = "", direction = "left") {
+  
+  // Sets the initial translation class based on direction
   const translateClass = direction === "right" ? "translate-x-0" : "-translate-x-2";
   return /*html*/ `
     <div class="relative px-4">
@@ -23,11 +27,10 @@ export function renderSearch(suffix = "", direction = "left") {
 
 // Fetches products and initializes listeners
 export async function initSearch() {
-  // 1. Only fetch products once
+  
+  // Only fetch products once
   if (!isInitialized) {
     try {
-      // PRO TIP: If you still get 500 error, change this path to "/src/data.json" 
-      // or "data.json" depending on your folder structure
       const response = await fetch("./src/data.json");
 
       if (!response.ok) {
@@ -44,7 +47,7 @@ export async function initSearch() {
     }
   }
 
-  // 2. Setup listeners for ALL search inputs found on page
+  // Setup listeners for ALL search inputs found on page
   const searchInputs = document.querySelectorAll('.search-input');
 
   searchInputs.forEach(input => {
@@ -72,11 +75,14 @@ export async function initSearch() {
       }
     });
   });
-} // <--- Added missing closing bracket for initSearch
+}
 
 // Filters query against product list
 export function filterProducts(query, products) {
   const q = query.toLowerCase();
+
+  // startsWith ensures matches only from the beginning of a word, not mid-word
+  // slice(0, 10) limits results to 10 items to keep the dropdown manageable
   return products.filter(
     (product) =>
       product.name.toLowerCase().startsWith(q) ||
@@ -110,13 +116,18 @@ export function renderDropdown(products, dropdownElement) {
   });
 }
 
-// Helper functions (fixed variable names and classes)
+// Opens the dropdown with a sliding animation based on direction
 function openDropdown(dropdownElement) {
+
+  // Removes invisible classes and adds visible classes to trigger CSS transition
   dropdownElement.classList.remove("opacity-0", "-translate-x-4", "translate-x-4", "pointer-events-none");
   dropdownElement.classList.add("opacity-100", "translate-x-0");
 }
 
+// Closes the dropdown by reversing the classes added in openDropdown
 function closeDropdown(dropdownElement) {
+
+  // Checks data-direction attribute to determine which side the dropdown slides out to
   const isRight = dropdownElement.dataset.direction === "right";
   dropdownElement.classList.remove("opacity-100", "translate-x-0");
   dropdownElement.classList.add("opacity-0", "pointer-events-none", isRight? "translate-x-4" : "-translate-x-4");

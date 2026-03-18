@@ -1,3 +1,4 @@
+// Renders the hero section with a background image, headline text and a call-to-action button
 export function renderHero() {
   return /*html*/`
 

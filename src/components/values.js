@@ -1,3 +1,4 @@
+// Renders the values section with three values
 export function renderValues() {
   return /*html*/`
 

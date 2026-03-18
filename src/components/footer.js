@@ -1,6 +1,6 @@
 import { createIcons, icons } from 'lucide';
 
-// Renders the footer with social media icons and contact information.
+// Renders the footer with social media icons (from Lucide icons) and contact information.
 export function renderFooter() {
   document.querySelector('footer').innerHTML = /*html*/`
     <div class="py-4" style="background-color: var(--site-txt)">
@@ -42,15 +42,19 @@ export function renderFooter() {
     </div>
   `;
 
+  // Initializes all Lucide icons in the DOM
   createIcons({icons});
 
-  createIcons({icons});
+  // Adds hover color effect to all footer icons
+  document.querySelectorAll('.footerIcon').forEach(icon => {
 
-document.querySelectorAll('.footerIcon').forEach(icon => {
+  // Changes icon and border color to accent color on hover
   icon.addEventListener('mouseenter', () => {
       icon.style.color = 'var(--accent)';
       icon.style.borderColor = 'var(--accent)';
   });
+
+  // Resets icon and border color to lighter accent color when mouse leaves
   icon.addEventListener('mouseleave', () => {
       icon.style.color = 'var(--accent-light)';
       icon.style.borderColor = 'var(--accent-light)';
