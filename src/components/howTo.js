@@ -1,7 +1,7 @@
 export function renderHowTo() {
   return /*html*/`
 
-<section class="py-16 px-6 md:px-12">
+<section class="py-20 px-6 md:px-12">
   <div class="max-w-2xl mx-auto">
     
     <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">Så bokar du –</h2>
