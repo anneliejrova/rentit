@@ -8,10 +8,6 @@ export async function render(route) {
 
   return /*html*/`
     <section>${renderHero()}</section>
-    
-    <!--<section aria-labelledby="home-heading">
-      <h2 id="home-heading">Rentit huvudsida</h2>
-    </section>-->
 
     <section>${renderValues()}</section>
 

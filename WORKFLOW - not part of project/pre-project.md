@@ -56,16 +56,6 @@ Orsaken är att göra det enklare för användare, på det här sättet används
 
 ---
 
-### Beslut: 
-Följa WCAG i så mycket som möjligt. 
-### Motivering:
-Vi vill redan från start ta hänsyn till WCAG krav och standard. Så vi implementerar Semantisk Html, gör vårt bästa att se till att sidan fungerar med screenreader, kontrollerar färgkontrast under färgvals processen etc.
-
-Det enda som läggs till listan av "i mån av tid" är tangentbords styrning, att kunna tabba sig igenom sidan, då detta är något vi behöver lära oss bättre och kan bli mer komplicerat i en vanilla SPA. I ett "riktigt projekt" skulle allt inom WCAG uppfyllas men som studenter måste vi även begränsa vårt arbete på vissa håll för att hålla deadline.
-
-<br>
-
----
 
 ### Beslut:
 Lägga till buffer-dagar till varje bokning.
