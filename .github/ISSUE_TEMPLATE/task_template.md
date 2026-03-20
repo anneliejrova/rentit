@@ -13,13 +13,11 @@ I want to....
 So that I...
 
 Acceptance Criteria:
-
 - [ ] (write here)
 
 ---
 
 Technical Steps
-
 - [ ] (write here)
 
 Architecture & Structure (Scaffolding)
