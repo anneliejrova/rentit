@@ -35,7 +35,7 @@ produkter för ett specifikt projekt vid ett och samma tillfälle.
     Projektet använder två publika API:er utan autentisering
   - Testimonials API för kundrekommendationer  
   - MyMemory API för översättning till svenska
-    (båda APIerna är gratis och publika, vilket innebär att inga API-nycklar krävs och ingen känslig information behöver akyddas. Det finns därför ingen .env-fil i projektet.)
+    (båda APIerna är gratis och publika, vilket innebär att inga API-nycklar krävs och ingen känslig information behöver skyddas. Det finns därför ingen .env-fil i projektet.)
 
 ## Instruktioner för att köra projektet
 1. Se till att [Node.js](https://nodejs.org) är installerat.
