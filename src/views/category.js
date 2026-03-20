@@ -17,15 +17,15 @@ export async function render(route) {
 
   return /* html */ `
  
-    <div class="p-17 bg-(--accent) rounded-2xl mb-8 flex gap-8 mx-auto items-center w-[60vw] shadow-2xl">
-    ${category.imgUrl? `
-        <img src="${category.imgUrl}" alt="${category.name}" class="w-64 h-66 object-cover rounded-xl shrink-0 shadow-md">
-    `: ""
-    }
+   <div class="p-6 md:p-17 bg-(--accent) rounded-2xl mb-8 flex flex-col md:flex-row gap-6 md:gap-8 mx-auto items-center w-[95vw] md:w-[60vw] shadow-2xl">
+    ${category.imgUrl ? `
+        <img src="${category.imgUrl}" alt="${category.name}" class="w-full md:w-64 h-48 md:h-66 object-cover rounded-xl shrink-0 shadow-md">
+    ` : ""}
     <div class="flex flex-col gap-3">
-        <h1 class="text-4xl font-bold" style="color: var(--accent-light)">${category.descriptionTitle}</h1>
-        <p class="text-1xl leading-relaxed max-w-prose">${category.description}</p>
+        <h1 class="text-2xl md:text-4xl font-bold" style="color: var(--accent-light)">${category.descriptionTitle}</h1>
+        <p class="text-sm md:text-1xl leading-relaxed max-w-prose">${category.description}</p>
     </div>
+</div>
 
 </div>
 

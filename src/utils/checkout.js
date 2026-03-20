@@ -1,7 +1,5 @@
 import { escapeHtml } from './helpers.js';
 
-// Sanitizes and validates user input from checkout form.
-// Returns sanitized object or null if required fields are missing.
 export function sanitizeBookingData() {
     const name = escapeHtml(document.querySelector("#checkoutFirstName")?.value.trim());
     const lastName = escapeHtml(document.querySelector("#checkoutLastName")?.value.trim());
@@ -11,8 +9,28 @@ export function sanitizeBookingData() {
     const zip = escapeHtml(document.querySelector("#checkoutZip")?.value.trim());
     const city = escapeHtml(document.querySelector("#checkoutCity")?.value.trim());
 
-    // Validate required fields
-    if (!name || !lastName || !email || !address || !zip || !city) return null;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const zipRegex = /^\d{5}$/;
+    const phoneRegex = /^[0-9+\s()-]{7,15}$/;
+    const nameRegex = /^[a-zA-ZåäöÅÄÖ\s-]{2,}$/;
+
+    const errors = [];
+    if (!name || !nameRegex.test(name)) errors.push("Förnamn (endast bokstäver)");
+    if (!lastName || !nameRegex.test(lastName)) errors.push("Efternamn (endast bokstäver)");
+    if (!email || !emailRegex.test(email)) errors.push("E-post (ogiltigt format)");
+    if (phone && !phoneRegex.test(phone)) errors.push("Telefonnummer (ogiltigt format)");
+    if (!address) errors.push("Adress");
+    if (!zip || !zipRegex.test(zip)) errors.push("Postnummer (5 siffror)");
+    if (!city || !nameRegex.test(city)) errors.push("Stad (endast bokstäver)");
+
+    if (errors.length > 0) {
+        const errorEl = document.querySelector("#checkoutErrors");
+        if (errorEl) errorEl.textContent = `Vänligen fyll i: ${errors.join(", ")}`;
+        return null;
+    }
+
+    const errorEl = document.querySelector("#checkoutErrors");
+    if (errorEl) errorEl.textContent = "";
 
     return { name, lastName, email, phone, address, zip, city };
 }
@@ -36,9 +54,11 @@ export function getHold() {
 // Confirms booking — sanitizes customer data, moves hold to bookings array, creates service entries, clears hold.
 export async function confirmBooking() {
     const hold = getHold();
+    console.log("hold:", hold);
     if (!hold) return;
 
     const customerData = sanitizeBookingData();
+    console.log("customerData:", customerData);
     if (!customerData) return;
 
     const { getData } = await import('./data.js');
@@ -75,15 +95,18 @@ export async function confirmBooking() {
 
     // Remove included products from cart after booking.
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    console.log("cart before filter:", cart);
     const updatedCart = cart.filter(item => !item.included);
+     console.log("cart after filter:", updatedCart)
 
     if (updatedCart.length === 0) {
-        localStorage.removeItem("cart");
+        localStorage.removeItem("cart");    
     } else {
         localStorage.setItem("cart", JSON.stringify(updatedCart));
     }
 
     clearHold();
+    return true;
 }
 
 // Returns end date string given a start date and number of days.

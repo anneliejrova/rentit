@@ -109,9 +109,10 @@ async function renderCartItems() {
   });
 
   document.querySelectorAll(".cartItemRemove").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const productId = btn.closest("[data-id]").dataset.id;
-      removeFromCart(productId);
+    btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const productId = btn.closest("[data-id]").dataset.id;
+        removeFromCart(productId);
     });
   });
 

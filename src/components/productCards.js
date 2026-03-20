@@ -1,4 +1,4 @@
-const CARD_MIN = '220px'; // var 330px
+const CARD_MIN = 'min(220px, 100%)';
 
 // Renders a single product card.
 function renderProductCard(p) {
@@ -20,10 +20,7 @@ function renderProductCard(p) {
 // Renders a grid of product cards from an array of products.
 export function renderProducts(products) {
     return /* html */`
-        <div class="w-300 mx-auto p-4 gap-8 grid"
-             style="
-                grid-template-columns: repeat(auto-fill, minmax(min(${CARD_MIN}, 100%), 1fr));
-             ">
+        <div class="w-full mx-auto p-4 gap-4 grid md:px-60 md:py-10" style="grid-template-columns: repeat(auto-fill, minmax(${CARD_MIN}, 1fr));">
             ${products.map(renderProductCard).join('')}
         </div>
     `;

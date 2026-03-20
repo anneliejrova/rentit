@@ -99,6 +99,8 @@ export async function render() {
 
         <div id="checkoutTimer" class="text-center text-sm text-gray-500 mb-4"></div>
 
+        <p id="checkoutErrors" class="text-red-500 text-sm mb-4"></p>
+
         <div class="flex gap-3">
             <button id="cancelBtn" class="flex-1 px-4 py-2 rounded border border-gray-300 text-gray-600 hover:bg-gray-50">Avbryt</button>
             <button id="bookNowBtn" class="flex-1 px-4 py-2 rounded text-white bg-gray-300 cursor-not-allowed" disabled>Boka nu</button>
@@ -165,8 +167,10 @@ export function initCheckout() {
 
     // Book Now button confirms booking and navigates home.
     document.querySelector("#bookNowBtn").addEventListener("click", async () => {
-        clearInterval(countdown);
-        await confirmBooking();
+    clearInterval(countdown);
+    const success = await confirmBooking();
+    if (success) {
         navigate("confirmation");
-    });
+    }
+});
 }
