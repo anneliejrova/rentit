@@ -185,10 +185,10 @@ export async function initCartDropdown() {
 
   const daysInput = document.querySelector("#bookDays");
 
-  daysInput.addEventListener("input", async () => {
+daysInput.addEventListener("input", async () => {
     const parsed = parseInt(daysInput.value);
 
-    if (isNaN(parsed) || daysInput.value === "") {
+    if (isNaN(parsed) || daysInput.value === "" || parsed < 1) {
       days = null;
       updateTotal();
       resetCheckout();
